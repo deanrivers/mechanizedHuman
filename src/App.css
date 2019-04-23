@@ -1,33 +1,181 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
+body{
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+
+.App {
+  
+  height: 100vh;
+  
   color: white;
+  text-align: center;
+
 }
 
-.App-link {
-  color: #61dafb;
+
+/* Added */
+#main{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-auto-rows: minmax(200px,auto);
+  grid-gap: 30px;
+  padding: 1%;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+.content-container{
+  /* background: red; */
+  
+  /* background: rgb(85, 85, 85); */
+  position: relative;
+  height: 100%;
+ 
+  min-width: 500px;
+  /* margin: 2%; */
+}
+
+.description-container{
+  background: black;
+  
+  top: 0;
+  left: 0;
+}
+
+.title-container{
+  position: relative;;
+  top: -25px;
+  right: 0;
+}
+
+#headline{
+
+ background: #873dff;
+ grid-column: 1/3;
+ grid-row: 1/3;
+ height: 725px;
+ 
+}
+#countdown{
+grid-column: 3;
+grid-row: 1/2;
+/* height: 50%; */
+
+
+}
+
+#summary{
+ background: rgb(255, 121, 255);
+grid-row: 2/3;
+/* height: 500px */
+
+}
+
+#news-feed{
+  background: rgb(0, 255, 34);
+  /* width: 300px; */
+  /* height: 800px; */
+  grid-column: 1/3;
+  grid-row: 3/5;
+}
+
+#videos{
+  grid-column: 3/4;
+  grid-row: 3;
+  background: rgb(255, 225, 170);
+  /* height: 40%; */
+  
+}
+
+#twitter{
+  grid-column: 3/4;
+  background: rgb(99, 99, 0);
+  /* height: 500px; */
+  /* grid-row: 3/5; */
+  
+}
+
+#contact{
+  background: #8b6bfd;
+  grid-column: 1;
+  grid-row: 5/7;
+}
+
+#empty-donate-right{
+  background: beige;
+  grid-column:3/4;
+}
+
+#donate{
+  background: #6b9cfd;
+  grid-row: 5;
+}
+
+#empty-donate-left{
+  background: #fd6bdd;
+  grid-row: 6;
+  grid-column: 2;
+}
+
+#donate2{
+  background: white;
+  grid-row: 6;
+}
+
+.main-containers{
+  background: rgb(255, 173, 173);
+  margin: 10px;
+}
+
+/* apply display flex */
+@media only screen and (max-width: 1000px) {
+
+  .App{
+    overflow-x: hidden;
   }
-  to {
-    transform: rotate(360deg);
+  #main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    
+
+    
+    
+    
+  }
+
+  .main-containers{
+    margin-top: 5%;
+  
+    
+  }
+
+  #countdown{
+    min-height: 200px;
+    
+  }
+
+  #summary{
+    min-height: 700px;
+  }
+
+  #news-feed{
+    min-height: 700px;
+  }
+  #videos{
+    min-height: 300px;
+  }
+  #twitter{
+    min-height: 400px;
+  }
+
+  #contact{
+    min-height: 400px;
+  }
+
+  #empty-donate-left, #empty-donate-right{
+    display: none;
   }
 }
