@@ -1,6 +1,7 @@
-body{
+html,body{
   background-color: #ffffff;
   height: 100vh;
+  position: relative;
 }
 
 
@@ -49,6 +50,10 @@ body{
   position: relative;;
   top: -25px;
   right: 0;
+}
+
+#main{
+  height: 100vh;
 }
 
 #headline{
