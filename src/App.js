@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import Content from './content';
+import Loader from './preloader';
+import $ from 'jquery';
+
 import './App.css';
 
 import Nav from './nav';
@@ -9,11 +12,41 @@ class App extends Component {
 
   render() {
 
+    //logic for pre loader
+    $( document ).ready(function() {
+      var main = $('#main');
+      var preLoader = $('#pre-loader-container');
+      var video = $('#video');
+      var nav = $('#nav-container');
+      
+
+      //inital display during animation
+      main.css("display","none");
+      
+      
+
+ 
+      //after animation has played out swap displays
+      setTimeout( function(){
+        
+        // main.css("display","block");
+        // preLoader.css("display","none");
+
+        main.fadeIn('fast');
+        preLoader.fadeOut('fast');
+        
+        
+      },2000)
     
+    
+    
+    });
+
+
     return (
       <div className="App">
+        <Loader/>
         <div id="main">
-          
           <Nav/>
           <div id="grid">
             <div className="main-containers" id="headline"><Content text="Headline" padding="0px" float="left" color="#97FAE9"/></div>
