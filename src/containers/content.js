@@ -3,16 +3,14 @@ import React, { Component } from 'react';
 
 class Content extends Component {
 
-    constructor(props){
-        super(props);    
+    constructor(props) {
+        super(props);
         this.state = {
-            
+
         };
     }
 
-
-
-    render(){
+    render() {
 
         var style = {
             background: this.props.color,
@@ -22,17 +20,15 @@ class Content extends Component {
             float: this.props.float
         };
 
-        return(
-            
+        return (
 
             <div className="content-container">
                 <div className="description-container">
-                    
-                    
+
                 </div>
                 <div className="title-container" style={style}>
-                        <p className="content-title" >{this.props.text}</p>
-                    </div>
+                    <p className="content-title" >{this.props.text}</p>
+                </div>
             </div>
         );
     }

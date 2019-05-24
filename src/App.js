@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import Content from './content';
-import Loader from './preloader';
+import Content from './containers/content';
+import Loader from './components/preloader';
 import $ from 'jquery';
 
 import './App.css';
 
-import Nav from './nav';
+import Nav from './containers/nav';
 
 class App extends Component {
 
