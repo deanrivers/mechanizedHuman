@@ -67,12 +67,6 @@ class App extends Component {
             <div className="main-containers" id="donate2"><Content text="donate" padding="0px" float="right" color="orange"/></div>
 
           </div>
-         
-            
-          
-
-
-          
           
         </div>
         
