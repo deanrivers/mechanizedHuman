@@ -1,16 +1,19 @@
 
 import axios from 'axios'
 
-const fetchFeed = () => {
-  axios.get("https://phys.org/rss-feed/breaking/technology-news/")
-    .then( response => {
-      console.log(response)
+let NewsFeed =  () => {
+
+
+  axios.get("/api/hello")
+    .then(response => {
       console.log(response.data)
+      return JSON.stringify(response.data)
     })
+    .catch(e => {
+      return "ERROR"
+    })
+
 }
 
-// let NewsFeed = () => {
-//   fetchFeed()
-//   return response.data
-// }
+export default NewsFeed
 

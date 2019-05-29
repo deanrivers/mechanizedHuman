@@ -8,8 +8,64 @@ import './App.css';
 
 import Nav from './containers/nav';
 import Countdown from './components/countdown';
+import axios from 'axios';
 
 class App extends Component {
+
+  constructor(props){
+    super(props);
+
+    this.state = {
+      feed : "LOADING"
+    }
+  }
+
+  
+  componentDidMount = () => {
+    this.newFeedFetch()
+    
+  }
+
+  listGenerator = (myData) => {
+
+    let listStyle = {
+      overflow: "scroll",
+      overflowY: "scroll",
+      flex: .5
+    }
+
+    console.log(myData)
+    if (Array.isArray(myData['items'])){
+      return (
+        <div >
+          <ul style={listStyle}>
+            { myData['items'].map( item  => 
+                <li>
+                  <a href={item['link']}><p>{item['title']}</p></a>
+
+                  <i>{item['content']}</i>
+                </li>   
+            )}
+          </ul>
+        </div>
+      )
+      
+    }else {
+      return myData
+    }
+  }
+
+  newFeedFetch = () => {
+
+    axios.get("/api/hello")
+    .then(response => {
+      this.setState({feed : response.data})
+    })
+    .catch(e => {
+      return "ERROR"
+    })    
+
+  }
 
 
   render() {
@@ -26,8 +82,6 @@ class App extends Component {
       main.css("display","none");
       
       
-
- 
       //after animation has played out swap displays
       setTimeout( function(){
         
@@ -45,7 +99,9 @@ class App extends Component {
     // get data for National Robot Day (4/4)
     const currentDate = new Date();
     let year = (currentDate.getMonth() > 3 && currentDate.getDate() > 4) ? currentDate.getFullYear() + 1 : currentDate.getFullYear();
-    
+
+    let myFeed = this.listGenerator(this.state.feed)
+
     return (
       <div className="App">
         <Loader/>
@@ -57,7 +113,9 @@ class App extends Component {
             content={<Countdown date={`${year}-04-04T00:00:00`} />}
             padding="0px" float="right" color="#97FAE9"/></div>
             <div className="main-containers" id="summary"><Content text="Summary" padding="0px" float="right" color="#FFFFFF"/></div>
-            <div className="main-containers" id="news-feed"><Content text="News Feed" padding="0px" float="left" color="#FF7441"/></div>
+
+            <div className="main-containers" id="news-feed"><Content content={myFeed} text="News Feed" padding="0px" float="left" color="#FF7441"/></div>
+
             <div className="main-containers" id="videos"><Content text="Videos" content={<VideoPlayer/>}padding="0px" float="right" color="#FFFDC6"/></div>
             <div className="main-containers" id="twitter"><Content text="Twitter" padding="0px" float="right" color="#65A2D9"/></div>
             <div className="main-containers" id="contact"><Content text="Contact" padding="0px" float="left" color="#ACE4AA"/></div>
@@ -67,13 +125,7 @@ class App extends Component {
             <div className="main-containers" id="donate2"><Content text="donate" padding="0px" float="right" color="orange"/></div>
 
           </div>
-         
-            
-          
-
-
-          
-          
+                   
         </div>
         
       </div>
