@@ -6,16 +6,29 @@ const port = process.env.PORT || 5000;
 const Parser = require('rss-parser');
 const parser = new Parser();
 
-const fetchFeed = async () => {
-  let feed = await parser.parseURL('https://phys.org/rss-feed/breaking/technology-news/');
+const fetchRSS = async (url) => {
+  let feed = await parser.parseURL(url);
   return feed
 }
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/api/hello', async (req, res) => {
-  let feed = await fetchFeed()
+app.get('/api/fetchFeed', async (req, res) => {
+  let physFeed = await fetchRSS('https://phys.org/rss-feed/breaking/technology-news/')
+  let mitFeed = await fetchRSS('http://news.mit.edu/rss/topic/science-technology-and-society')
+  let feed = {items: [...physFeed['items'], ...mitFeed['items']]}
+
+  res.send(feed);
+});
+
+app.get('/api/fetchPhys', async (req, res) => {
+  let feed = await fetchRSS('https://phys.org/rss-feed/breaking/technology-news/')
+  res.send(feed);
+});
+
+app.get('/api/fetchMit', async (req, res) => {
+  let feed = await fetchRSS('http://news.mit.edu/rss/topic/science-technology-and-society')
   console.log(feed)
   //res.send({ data: "tester" });
   res.send(feed);
