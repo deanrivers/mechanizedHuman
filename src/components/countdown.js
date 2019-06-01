@@ -85,10 +85,11 @@ class Countdown extends Component {
     const countDown = this.state;
 
     return (
-      <div className="Countdown">
+      <div className="Countdown" id="countdown-container">
         <span className="Countdown-col">
           <span className="Countdown-col-element">
-              <strong>{this.addLeadingZeros(countDown.days)}</strong>
+            <span><strong>{this.addLeadingZeros(countDown.days)}</strong></span>
+              
               <span>{countDown.days === 1 ? 'Day' : 'Days'}</span>
           </span>
         </span>

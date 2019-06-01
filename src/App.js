@@ -48,16 +48,25 @@ class App extends Component {
     
     return (
       <div className="App">
-        <Loader/>
+        {/* <Loader/> */}
         <div id="main">
           <Nav/>
           <div id="grid">
             <div className="main-containers" id="headline"><Content text="Headline" padding="0px" float="left" color="#97FAE9"/></div>
-            <div className="main-containers" id="countdown"><Content text="Countdown" 
-            content={<Countdown date={`${year}-04-04T00:00:00`} />}
-            padding="0px" float="right" color="#97FAE9"/></div>
+
+            <div className="main-containers" id="countdown">
+              
+           
+
+              <Content text="Countdown" 
+            content={<Countdown date={`${year}-04-04T00:00:00`} />}            
+            padding="0px" float="right" color="#97FAE9"/>
+            
+         
+            </div>
+
             <div className="main-containers" id="summary"><Content text="Summary" padding="0px" float="right" color="#FFFFFF"/></div>
-            <div className="main-containers" id="news-feed"><Content text="News Feed" padding="0px" float="left" color="#FF7441"/></div>
+            <div className="main-containers" id="news-feed"><Content id="countdown-contatiner" text="News Feed" padding="0px" float="left" color="#FF7441"/></div>
             <div className="main-containers" id="videos"><Content text="Videos" content={<VideoPlayer/>}padding="0px" float="right" color="#FFFDC6"/></div>
             <div className="main-containers" id="twitter"><Content text="Twitter" padding="0px" float="right" color="#65A2D9"/></div>
             <div className="main-containers" id="contact"><Content text="Contact" padding="0px" float="left" color="#ACE4AA"/></div>

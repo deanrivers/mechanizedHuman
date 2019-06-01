@@ -26,10 +26,15 @@ class Content extends Component {
             justifyContent: "center",
             paddingTop: "1.5%"
         }
+        
+
+        
+        var id= "this.props.id";
+        console.log(id);
 
         return (
 
-            <div className="content-container">
+            <div className="content-container" id={this.props.text}>
                 <div className="description-container"></div>
                 
                 <div className="title-container" style={style}>
