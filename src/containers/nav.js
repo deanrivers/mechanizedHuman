@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import robot from '../assets/robot.png';
 
 
-
-
-
 class Nav extends Component {
     render() {
+        
         return (
             <div id="nav-container">
                 <div id="nav-flex">

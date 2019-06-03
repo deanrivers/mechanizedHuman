@@ -12,7 +12,7 @@ class Content extends Component {
 
     render() {
 
-        var style = {
+        let style = {
             background: this.props.color,
             padding: this.props.padding,
             zIndex: '1',
@@ -24,7 +24,8 @@ class Content extends Component {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            paddingTop: "1.5%"
+            paddingTop: "0%",
+            height: "100%",
         }
         
 
