@@ -5,9 +5,7 @@ class Content extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {
-
-        };
+        this.state = {};
     }
 
     render() {
@@ -31,7 +29,7 @@ class Content extends Component {
 
         
         var id= "this.props.id";
-        console.log(id);
+        
 
         return (
 

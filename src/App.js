@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Content from './containers/content';
 import VideoPlayer from './components/videoPlayer'
 import Loader from './components/preloader';
+import Summary from './components/summary'
 import $ from 'jquery';
 
 import './App.css';
@@ -59,29 +60,19 @@ class App extends Component {
         <div id="main">
           <Nav/>
           <div id="grid">
+
             <div className="main-containers" id="headline">
-              
-            <Content content="tese" text="Headline" padding="0px" float="left" color="#97FAE9"/>
-              
-
-
-  
-            
+              <Content content="tese" text="Headline" padding="0px" float="left" color="#97FAE9"/>
             </div>
 
             <div className="main-containers" id="countdown">
-              
-           
-
-            <Content text="Countdown" 
-            content={<Countdown date={`${year}-04-04T00:00:00`} />}            
-            padding="0px" float="right" color="#97FAE9"/>
-            
-         
+              <Content text="Countdown" 
+              content={<Countdown date={`${year}-04-04T00:00:00`} />}            
+              padding="0px" float="right" color="#97FAE9"/>
             </div>
 
-            <div className="main-containers" id="summary"><Content text="Summary" padding="0px" float="right" color="#FFFFFF"/></div>
-            <div className="main-containers" id="news-feed"><Content content={<NewsFeed/>}id="countdown-contatiner" text="News Feed" padding="0px" float="left" color="#FF7441"/></div>
+            <div className="main-containers" id="summary"><Content text="Summary" content={<Summary/>} padding="0px" float="right" color="#FFFFFF"/></div>
+            <div className="main-containers" id="news-feed"><Content id="countdown-contatiner" text="News Feed" padding="0px" float="left" color="#FF7441"/></div>
             <div className="main-containers" id="videos"><Content text="Robot Videos" content={<VideoPlayer/>}padding="0px" float="right" color="#FFFDC6"/></div>
             <div className="main-containers" id="twitter"><Content text="Twitter" padding="0px" float="right" color="#65A2D9"/></div>
             <div className="main-containers" id="contact"><Content text="Contact" padding="0px" float="left" color="#ACE4AA"/></div>
