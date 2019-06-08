@@ -111,8 +111,11 @@ background-image: linear-gradient(to bottom right, white,#FFE2E2);
   grid-row: 2/5;
 /* grid-column: 2/4; */
 /* height: 500px */
+background-image: linear-gradient(to bottom right, white,#F4F4F4);
 
 }
+
+
 
 #news-feed{
   background: #E5E5E5;
@@ -120,6 +123,16 @@ background-image: linear-gradient(to bottom right, white,#FFE2E2);
   /* height: 80%; */
   grid-column: 1/3;
   grid-row: 4/9;
+}
+
+#news-feed-container{
+  margin-top: 7%;
+}
+
+#news-feed-container > ul{
+  list-style: none;
+  padding: 10%;
+  padding-top: 5%;
 }
 
 #videos{
