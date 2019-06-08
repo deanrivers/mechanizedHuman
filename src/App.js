@@ -81,7 +81,7 @@ class App extends Component {
             </div>
 
             <div className="main-containers" id="summary"><Content text="Summary" padding="0px" float="right" color="#FFFFFF"/></div>
-            <div className="main-containers" id="news-feed"><Content id="countdown-contatiner" text="News Feed" padding="0px" float="left" color="#FF7441"/></div>
+            <div className="main-containers" id="news-feed"><Content content={<NewsFeed/>}id="countdown-contatiner" text="News Feed" padding="0px" float="left" color="#FF7441"/></div>
             <div className="main-containers" id="videos"><Content text="Robot Videos" content={<VideoPlayer/>}padding="0px" float="right" color="#FFFDC6"/></div>
             <div className="main-containers" id="twitter"><Content text="Twitter" padding="0px" float="right" color="#65A2D9"/></div>
             <div className="main-containers" id="contact"><Content text="Contact" padding="0px" float="left" color="#ACE4AA"/></div>
