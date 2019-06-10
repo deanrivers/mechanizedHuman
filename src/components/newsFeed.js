@@ -43,14 +43,18 @@ class NewsFeed extends Component {
 
   render() {
     return (
-      <div >
+      <div id="news-feed-container">
         <ul style={listStyle}>
           { this.state.feed['items'].map( item  => 
               <li>
                 <a href={item['link']}><p>{item['title']}</p></a>
                 <i>{item['content']}</i>
-              </li>   
+                
+              </li>
+              
+                       
           )}
+          
         </ul>
     </div>
     )
