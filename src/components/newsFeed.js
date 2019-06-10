@@ -49,8 +49,9 @@ class NewsFeed extends Component {
               <li>
                 <a href={item['link']}><p>{item['title']}</p></a>
                 <i>{item['content']}</i>
-                <hr></hr>
+                
               </li>
+              
                        
           )}
           
