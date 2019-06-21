@@ -74,12 +74,12 @@ class App extends Component {
             <div className="main-containers" id="summary"><Content text="Summary" content={<Summary/>} padding="0px" float="right" color="#FFFFFF"/></div>
             <div className="main-containers" id="news-feed"><Content content={<NewsFeed/>}id="countdown-contatiner" text="News Feed" padding="0px" float="left" color="#FF7441"/></div>
             <div className="main-containers" id="videos"><Content text="Robot Videos" content={<VideoPlayer/>}padding="0px" float="right" color="#FFFDC6"/></div>
-            <div className="main-containers" id="twitter"><Content text="Twitter" padding="0px" float="right" color="#65A2D9"/></div>
+            {/* <div className="main-containers" id="twitter"><Content text="Twitter" padding="0px" float="right" color="#65A2D9"/></div>
             <div className="main-containers" id="contact"><Content text="Contact" padding="0px" float="left" color="#ACE4AA"/></div>
             <div className="main-containers" id="donate"><Content text="donate" padding="0px" float="left" color="white"/></div>
             <div className="main-containers" id="empty-donate-right"><Content text="empty" padding="0px" float="right" color="purple"/></div>
             <div className="main-containers" id="empty-donate-left"><Content text="empty" padding="0px" float="right" color="white"/></div>
-            <div className="main-containers" id="donate2"><Content text="donate" padding="0px" float="right" color="orange"/></div>
+            <div className="main-containers" id="donate2"><Content text="donate" padding="0px" float="right" color="orange"/></div> */}
 
           </div>
                    
