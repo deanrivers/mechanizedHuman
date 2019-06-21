@@ -27,10 +27,6 @@ class Content extends Component {
         }
         
 
-        
-        var id= "this.props.id";
-        
-
         return (
 
             <div className="content-container" id={this.props.text}>
