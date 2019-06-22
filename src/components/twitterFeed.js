@@ -1,10 +1,10 @@
 
-import axios from 'axios'
+import axios from 'axios';
 import React, { Component } from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
 let listStyle = {
-  maxHeight: '1000px',
+  maxHeight: '300px',
   overflow: 'scroll'
 }
 
@@ -43,6 +43,7 @@ class TwitterFeed extends Component {
     return (
       <div id="twitter-feed-container">
         <ul style={listStyle}>
+          
           { this.state.feed.map( tweet  => 
               <li>
                 <p>{tweet['text']}</p>
