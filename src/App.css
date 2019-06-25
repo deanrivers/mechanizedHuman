@@ -349,8 +349,61 @@ color: white;
   font-style: italic;
 }
 
+/* contact form */
+#contact-container{
+  
+  /* padding: 72px 55px 90px 55px; */
+  padding: 120px;
+  width: 100%;
 
+}
 
+#contact-form{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-field{
+  border: none;
+  border-bottom: 2px solid #2cc7b5;
+  outline: none;
+  margin-bottom: 10px;
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.5;
+  padding: 5px;
+  width: 100%;
+}
+
+#submit-button{
+  transition: background-color 0.4s;
+  /* background: linear-gradient(-135deg, #64ffed, #2cc7b5); */
+  background: #2cc7b5;
+  /* background: linear-gradient(-135deg, #d5007d, #e53935, #d5007d, #e53935); */
+  /* background: #38c2b2; */
+  color: white;
+  width: 50%;
+  height: 45px;
+  padding: 10px;
+  border-radius: 0px;
+  border: none;
+  outline: none;
+  margin: 0 auto;
+}
+
+#message-area{
+  min-height: 100px;
+  max-height: 200px;
+  resize: vertical;
+}
+
+#submit-button:hover{
+  /* background-image: linear-gradient(-135deg,  #2cc7b5,#64ffed); */
+  background: #53d1c2;
+  cursor: pointer;
+}
 
 /* apply display flex */
 @media only screen and (max-width: 800px) {
