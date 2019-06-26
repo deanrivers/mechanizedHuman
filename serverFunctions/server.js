@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const serverless = require('serverless-http');
 const app = express();
+const router = express.Router();
 const port = process.env.PORT || 5000;
 
 const consumer_id = process.env.consumer_id
@@ -34,7 +35,7 @@ const tokenConfig = {
 };
  
 // Twitter Timeline Endpoint
-app.get('/api/fetchTimeline', async (req, res) => {
+router.get('/fetchTimeline', async (req, res) => {
 
   let myData = []
 
@@ -68,7 +69,7 @@ const fetchRSS = async (url) => {
   return feed
 }
 
-app.get('/api/fetchFeed', async (req, res) => {
+router.get('/fetchFeed', async (req, res) => {
   let physFeed = await fetchRSS('https://phys.org/rss-feed/breaking/technology-news/')
   let mitFeed = await fetchRSS('http://news.mit.edu/rss/topic/science-technology-and-society')
   let feed = {items: [...physFeed['items'], ...mitFeed['items']]}
@@ -76,12 +77,12 @@ app.get('/api/fetchFeed', async (req, res) => {
   res.send(feed);
 });
 
-app.get('/api/fetchPhys', async (req, res) => {
+router.get('/fetchPhys', async (req, res) => {
   let feed = await fetchRSS('https://phys.org/rss-feed/breaking/technology-news/')
   res.send(feed);
 });
 
-app.get('/api/fetchMit', async (req, res) => {
+router.get('/fetchMit', async (req, res) => {
   let feed = await fetchRSS('http://news.mit.edu/rss/topic/science-technology-and-society')
   console.log(feed)
   //res.send({ data: "tester" });
@@ -89,6 +90,10 @@ app.get('/api/fetchMit', async (req, res) => {
 });
 
 
-app.listen(port, () => console.log(`Listening on port ${port}`));
+app.use('/.netlify/functions/server', router);
 
+// app.listen(port, () => console.log(`Listening on port ${port}`));
+
+
+module.exports = app;
 module.exports.handler = serverless(app);
