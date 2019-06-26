@@ -1,10 +1,10 @@
-require('dotenv').config();
 const axios = require('axios');
 const express = require('express');
 const bodyParser = require('body-parser');
+const serverless = require('serverless-http');
 const app = express();
 const router = express.Router();
-const port = process.env.PORT || 5000;
+
 const consumer_id = process.env.REACT_APP_CONSUMER_ID
 const consumer_secret = process.env.REACT_APP_CONSUMER_SECRET
 
@@ -86,4 +86,5 @@ router.get('/fetchMit', async (req, res) => {
 
 app.use('/.netlify/functions/server', router);
 
-app.listen(port, () => console.log(`Listening on port ${port}`));
+module.exports = app;
+module.exports.handler = serverless(app);

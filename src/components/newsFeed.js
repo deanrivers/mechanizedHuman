@@ -29,7 +29,7 @@ class NewsFeed extends Component {
 
   newFeedFetch = () => {
 
-    axios.get("/api/fetchFeed")
+    axios.get("/.netlify/functions/server/fetchFeed")
     .then(response => {
       this.setState({feed : response.data})
     })
