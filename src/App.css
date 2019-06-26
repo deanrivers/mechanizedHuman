@@ -161,7 +161,7 @@ color: white;
 }
 
 #videos{
-  grid-column: 2/5;
+  grid-column: 2/4;
   
   grid-row: 4;
   /* max-height: 400px; */
@@ -312,7 +312,7 @@ color: white;
 .iframe-container {
   position: relative;
   width: 100%;
-  padding-bottom: 55.25%;
+  padding-bottom: 56.25%;
   /* box-shadow: 10px 10px; */
   /* box-shadow: 2px 5px 4px 1px; */
   overflow: hidden;
@@ -353,8 +353,9 @@ color: white;
 #contact-container{
   
   /* padding: 72px 55px 90px 55px; */
-  padding: 120px;
+  padding: 15%;
   width: 100%;
+  max-height: 320px;
 
 }
 
@@ -367,14 +368,19 @@ color: white;
 
 .text-field{
   border: none;
-  border-bottom: 2px solid #2cc7b5;
+  border-bottom: 2px solid #b8b8b8;
   outline: none;
-  margin-bottom: 10px;
+  margin-bottom: 10%;
   font-size: 15px;
   color: #555555;
   line-height: 1.5;
   padding: 5px;
-  width: 100%;
+  background: none;
+  
+}
+
+.text-field:focus{
+  border-bottom: 2px solid #2cc7b5;
 }
 
 #submit-button{
@@ -387,16 +393,20 @@ color: white;
   width: 50%;
   height: 45px;
   padding: 10px;
-  border-radius: 0px;
+  border-radius: 5px;
   border: none;
   outline: none;
   margin: 0 auto;
+  font-size: 15px;
 }
 
 #message-area{
-  min-height: 100px;
-  max-height: 200px;
+  /* min-height: 100px; */
+  height: 20px;
+  max-height: 120px;
   resize: vertical;
+  margin-bottom: 0;
+  width: 100%;
 }
 
 #submit-button:hover{
@@ -405,6 +415,11 @@ color: white;
   cursor: pointer;
 }
 
+#character-count{
+  margin-bottom: 10%;
+  font-size: 12px;
+  padding: 5px;
+}
 /* apply display flex */
 @media only screen and (max-width: 800px) {
 
