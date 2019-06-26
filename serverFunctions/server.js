@@ -1,15 +1,20 @@
 const axios = require('axios');
 const express = require('express');
 const bodyParser = require('body-parser');
+const serverless = require('serverless-http');
 const app = express();
 const port = process.env.PORT || 5000;
+
+const consumer_id = process.env.consumer_id
+const consumer_secret = process.env.consumer_secret
+
 const Parser = require('rss-parser');
 const parser = new Parser();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const consumer_id = 'OcQDUeAf7BC5j8ihlmStZGWos'
-const consumer_secret = 'pagB4Kdn4JqoPRfZulUIIumiGIV89KkqA1DulFlT6bPxR22Geu'
+// const consumer_id = 'OcQDUeAf7BC5j8ihlmStZGWos'
+// const consumer_secret = 'pagB4Kdn4JqoPRfZulUIIumiGIV89KkqA1DulFlT6bPxR22Geu'
 
 const credentials = {
   client: {
@@ -37,7 +42,6 @@ app.get('/api/fetchTimeline', async (req, res) => {
     const result = await oauth2.clientCredentials.getToken(tokenConfig);
     const accessTokenObject = oauth2.accessToken.create(result);
     const accessToken = accessTokenObject.token['access_token']
-    //const tokenBase64 = new Buffer(accessToken).toString('base64');
     const config = {
       headers: { 
         'Authorization': 'Bearer ' + accessToken,
@@ -84,11 +88,7 @@ app.get('/api/fetchMit', async (req, res) => {
   res.send(feed);
 });
 
-app.post('/api/world', (req, res) => {
-  console.log(req.body);
-  res.send(
-    `I received your POST request. This is what you sent me: ${req.body.post}`,
-  );
-});
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
+
+module.exports.handler = serverless(app);
