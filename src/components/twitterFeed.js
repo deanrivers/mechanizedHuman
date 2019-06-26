@@ -27,7 +27,7 @@ class TwitterFeed extends Component {
 
   twitterFeedFetch = () => {
 
-    axios.get("/api/fetchTimeline")
+    axios.get("/.netlify/functions/server/fetchTimeline")
     .then(response => {
       this.setState({feed : response.data})
     })
