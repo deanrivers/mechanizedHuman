@@ -290,7 +290,7 @@ color: white;
 }
 
 #pre-loader-container{
-  background: #30323e;
+  background: white;
 
   position: absolute;
     width: 100%;
@@ -376,6 +376,7 @@ color: white;
   line-height: 1.5;
   padding: 5px;
   background: none;
+  width: 100%;
   
 }
 
@@ -406,7 +407,7 @@ color: white;
   max-height: 120px;
   resize: vertical;
   margin-bottom: 0;
-  width: 100%;
+  /* width: 100%; */
 }
 
 #submit-button:hover{

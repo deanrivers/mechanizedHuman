@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Content from './containers/content';
 import VideoPlayer from './components/videoPlayer'
-//import Loader from './components/preloader';
+import Loader from './components/preloader';
 import Summary from './components/summary'
 import $ from 'jquery';
 
@@ -29,22 +29,23 @@ class App extends Component {
     $( document ).ready(function() {
       var main = $('#main');
       var preLoader = $('#pre-loader-container');
-      // var video = $('#video');
-      // var nav = $('#nav-container');
+      var video = $('#video');
+      var nav = $('#nav-container');
       
 
       //inital display during animation
-      main.css("display","block");
+      main.css("display","none");
       
       
       //after animation has played out swap displays
       setTimeout( function(){
         
         // main.css("display","block");
-        // preLoader.css("display","none");
+        preLoader.css("display","none");
 
         main.fadeIn('fast');
         preLoader.fadeOut('fast');
+        
         
         
       },2000)
@@ -57,7 +58,7 @@ class App extends Component {
     
     return (
       <div className="App">
-        {/* <Loader/> */}
+        <Loader/>
         <div id="main">
           <Nav/>
           <div id="grid">
