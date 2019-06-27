@@ -267,6 +267,7 @@ color: white;
   display: flex;
   justify-content: space-evenly;
   width: 100vw;
+  margin: 0 auto;
 
 }
 #logo{
@@ -432,6 +433,7 @@ color: white;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+    min-width: 500px;
 
     
     margin: 0 auto;
@@ -491,4 +493,6 @@ color: white;
   #donate, #donate2{
     min-height: 330px;
   }
+
+  
 }
