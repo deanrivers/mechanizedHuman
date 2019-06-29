@@ -141,9 +141,11 @@ color: white;
   list-style: none;
   padding: 10%;
   padding-top: 5%;
-  border: 1px solid;
+  border: 1px solid black;
   margin: 5%;
-  min-width: 100px;
+  /* min-width: 300px;
+  margin: 0 auto; */
+
 }
 
 #news-feed-container > ul > li{
@@ -193,7 +195,7 @@ color: white;
   list-style: none;
   padding: 10%;
   padding-top: 5%;
-  border: 1px solid;
+  border: 1px solid black;
   margin: 5%;
 }
 
