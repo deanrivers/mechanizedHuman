@@ -6,6 +6,8 @@ html,body{
 }
 
 
+
+
 /* .App {
   
   height: 100vh;
@@ -433,8 +435,9 @@ color: white;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    min-width: 500px;
-
+    min-width: 300px;
+    /* min-width: 100%; */
+    
     
     margin: 0 auto;
     margin-top: 22% !important;
@@ -494,5 +497,9 @@ color: white;
     min-height: 330px;
   }
 
+  #main{
+    /* max-width: 500px; */
+    
+  }
   
 }

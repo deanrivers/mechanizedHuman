@@ -26,31 +26,31 @@ class App extends Component {
   render() {
 
     //logic for pre loader
-    $( document ).ready(function() {
-      var main = $('#main');
-      var preLoader = $('#pre-loader-container');
-      var video = $('#video');
-      var nav = $('#nav-container');
+    // $( document ).ready(function() {
+    //   var main = $('#main');
+    //   var preLoader = $('#pre-loader-container');
+    //   var video = $('#video');
+    //   var nav = $('#nav-container');
       
 
-      //inital display during animation
-      main.css("display","none");
+    //   //inital display during animation
+    //   main.css("display","none");
       
       
-      //after animation has played out swap displays
-      setTimeout( function(){
+    //   //after animation has played out swap displays
+    //   setTimeout( function(){
         
-        // main.css("display","block");
-        preLoader.css("display","none");
+    //     // main.css("display","block");
+    //     preLoader.css("display","none");
 
-        main.fadeIn('fast');
-        preLoader.fadeOut('fast');
+    //     main.fadeIn('fast');
+    //     preLoader.fadeOut('fast');
         
         
         
-      },2000)
+    //   },2000)
     
-    });
+    // });
 
     // get data for National Robot Day (4/4)
     const currentDate = new Date();
@@ -58,7 +58,8 @@ class App extends Component {
     
     return (
       <div className="App">
-        <Loader/>
+        {/* <meta name="viewport" content="width=device-width, initial-scale=1.0"/> */}
+        {/* <Loader/> */}
         <div id="main">
           <Nav/>
           <div id="grid">
