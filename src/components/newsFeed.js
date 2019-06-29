@@ -36,9 +36,6 @@ class NewsFeed extends Component {
     .catch(e => {
       return "ERROR"
     })
-
-
-
   }
 
   render() {

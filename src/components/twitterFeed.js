@@ -34,9 +34,6 @@ class TwitterFeed extends Component {
     .catch(e => {
       return "ERROR"
     })
-
-
-
   }
 
   render() {

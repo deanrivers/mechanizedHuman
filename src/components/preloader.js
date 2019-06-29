@@ -6,7 +6,7 @@ import video from '../assets/ex1.mp4';
 let Loader = () => {
     return (
         <div id="pre-loader-container">
-            <video id="video" autoPlay muted src={video}></video>
+            <video id="video" autoPlay loop muted src={video}></video>
         </div>
     );
 }
