@@ -1,6 +1,8 @@
 const axios = require('axios');
 const express = require('express');
 const bodyParser = require('body-parser');
+const { google } = require('googleapis');
+const { Base64 } = require('js-base64')
 const serverless = require('serverless-http');
 const app = express();
 const router = express.Router();
@@ -8,36 +10,96 @@ const router = express.Router();
 const consumer_id = process.env.REACT_APP_CONSUMER_ID
 const consumer_secret = process.env.REACT_APP_CONSUMER_SECRET
 
+const gmailClientID = process.env.REACT_APP_GMAIL_CONSUMER_ID
+const gmailClientSecret = process.env.REACT_APP_GMAIL_CONSUMER_SECRET
+const gmailRefreshToken = process.env.REACT_APP_GMAIL_REFRESH_TOKEN
+
 const Parser = require('rss-parser');
 const parser = new Parser();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const credentials = {
-  client: {
-    id: consumer_id,
-    secret: consumer_secret
-  },
-  auth: {
-    tokenHost: 'https://api.twitter.com',
-    tokenPath: '/oauth2/token',
-    revokePath: '/oauth2/invalidate_token'
+const oauth2Client = new google.auth.OAuth2(
+  gmailClientID,
+  gmailClientSecret,
+  ['http://localhost']
+);
+
+const scopes = [
+  'https://www.googleapis.com/auth/gmail.send',
+  'https://www.googleapis.com/auth/gmail.compose',
+  'https://www.googleapis.com/auth/gmail.readonly',
+];
+
+
+router.post('/sendMail', async (req, res) => {
+    
+  oauth2Client.setCredentials({
+    refresh_token: gmailRefreshToken
+  });
+
+  try{
+
+    const gmail = google.gmail({
+      version: 'v1',
+      auth: oauth2Client // specify your API key here
+    });
+
+    const makeBody = () => {
+      var str = ["Content-Type: text/plain; charset=\"UTF-8\"\n",
+          "MIME-Version: 1.0\n",
+          "Content-Transfer-Encoding: 7bit\n",
+          "to: ", "mechhummedia@gmail.com", "\n",
+          "from: ", "mechhummedia@gmail.com", "\n",
+          "subject: ", "New Notification!", "\n\n",
+          "Sender Email: " + req.body.email + "!\nMessage:\n\n" + req.body.message
+      ].join('');
+    
+    let base64EncodedEmail = Base64.encodeURI(str);
+    return base64EncodedEmail
+    }
+
+    const response = await gmail.users.messages.send({
+      userId: 'me',
+      resource: {
+      raw: makeBody()
+    }})
+    console.log(response)
+
+  }catch (error){
+    console.log(error)
   }
-};
-// Initialize the OAuth2 Library
-const oauth2 = require('simple-oauth2').create(credentials);
-const tokenConfig = {
-  scope: 'read',
-};
+  res.send(200)
+})
+
+
  
 // Twitter Timeline Endpoint
 router.get('/fetchTimeline', async (req, res) => {
 
+    // Twitter oauth config
+  const twitterCredentials = {
+    client: {
+      id: consumer_id,
+      secret: consumer_secret
+    },
+    auth: {
+      tokenHost: 'https://api.twitter.com',
+      tokenPath: '/oauth2/token',
+      revokePath: '/oauth2/invalidate_token'
+    }
+  };
+  // Initialize the OAuth2 Library
+  const twitterOauth2 = require('simple-oauth2').create(twitterCredentials);
+  const twitterTokenConfig = {
+    scope: 'read',
+  };
+
   let myData = []
 
   try {
-    const result = await oauth2.clientCredentials.getToken(tokenConfig);
-    const accessTokenObject = oauth2.accessToken.create(result);
+    const result = await twitterOauth2.clientCredentials.getToken(twitterTokenConfig);
+    const accessTokenObject = twitterOauth2.accessToken.create(result);
     const accessToken = accessTokenObject.token['access_token']
     const config = {
       headers: { 
@@ -82,7 +144,6 @@ router.get('/fetchMit', async (req, res) => {
   let feed = await fetchRSS('http://news.mit.edu/rss/topic/science-technology-and-society')
   res.send(feed);
 });
-
 
 app.use('/.netlify/functions/server', router);
 
