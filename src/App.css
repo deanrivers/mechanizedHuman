@@ -134,7 +134,7 @@ height: 100%;
 }
 
 #news-feed-container{
-  margin-top: 7%;
+  /* margin-top: 7%; */
   max-width: 350px;
  
 }
@@ -163,6 +163,7 @@ height: 100%;
   border-top: 2px solid #ccc;
   animation-name: news-pop-down; 
   animation-duration: 0.1s;
+  animation-timing-function: ease-in;
   
 }
 #news-feed-container > ul > li:hover{
@@ -170,7 +171,12 @@ height: 100%;
   border-top: 5px solid rgb(219, 88, 255);
   animation-name: news-pop-up; 
   animation-duration: 0.2s;
+  animation-timing-function: ease-out;
   
+}
+
+#news-feed-container > ul > li > a > p{
+  /* margin: 10px auto; */
 }
 /* #news-feed-container > ul > li:nth-child(even){
   background: #d6d6d6;
