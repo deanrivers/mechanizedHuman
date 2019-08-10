@@ -5,8 +5,6 @@ import VideoPlayer from './components/videoPlayer'
 import Loader from './components/preloader';
 import Summary from './components/summary'
 
-import $ from 'jquery';
-
 import './App.css';
 
 import Nav from './containers/nav';
