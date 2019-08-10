@@ -22,7 +22,7 @@ html,body{
 #grid{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-auto-rows: minmax(200px,auto);
+  /* grid-auto-rows: minmax(200px,auto); */
   grid-gap: 10px;
   margin: 12% 10% 0% 10%;
   
@@ -52,8 +52,9 @@ html,body{
 
 .title-container{
   position: absolute;
-  top: -25px;
+  /* top: -25px; */
   right: 0;
+  font-size: 0.5em;
 }
 
 #main{
@@ -77,12 +78,12 @@ grid-row: 1/2;
 background: #475c7a;
 color: white;
 /* background-image: linear-gradient(to bottom right, white,#475c7a); */
-/* height: 50%; */
+height: 100%;
 }
 
 #countdown-container{
 
-  font-size: 1.5em;
+  font-size: 1.0em;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serifl;
   /* font-family: 'Ubuntu', sans-serif; */
   display: flex;
@@ -107,7 +108,7 @@ color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0px 20px 0px 20px;
+    padding: 15px 15px 15px 15px;
 }
 
 #summary{
@@ -249,7 +250,8 @@ color: white;
   background: rgb(255, 173, 173);
   margin: 10px;
   border-radius: 5px;
-  box-shadow: 2px 3px 3px 0px #c4c4c4;
+  box-shadow: 2px 3px 3px 0px #b7b7b7;
+  /* background: white !important; */
 }
 
 
@@ -428,7 +430,7 @@ color: white;
   padding: 5px;
 }
 /* apply display flex */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
 
   .App{
     overflow-x: hidden;
@@ -465,8 +467,8 @@ color: white;
     min-height: 400px;
   }
   #countdown{
-    min-height: 100px;
-    max-height: 100px;
+    /* min-height: 100px;
+    max-height: 100px; */
     
     
     
