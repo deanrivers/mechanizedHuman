@@ -1,7 +1,6 @@
 {
   "name": "mechanized-human",
   "version": "0.1.0",
-  "proxy": "http://localhost:5000/",
   "private": true,
   "dependencies": {
     "@hapi/wreck": "^15.0.1",
@@ -15,22 +14,19 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-player": "^1.11.0",
-    "react-scripts": "2.1.8",
     "rss-parser": "^3.7.1",
     "server-destroy": "^1.0.1",
     "serverless-http": "^2.0.2",
     "simple-oauth2": "^2.2.1"
   },
   "scripts": {
-    "start": "PORT=9000 react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
     "server": "nodemon server.js",
     "dev": "concurrently \"npm run server\" \"npm run start\"",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "eject": "react-scripts eject",
+    "start": "webpack-dev-server -d --config=webpack/webpack.dev.js --open --history-api-fallback --inline --progress --hot",
+    "watch": "webpack --watch -d",
+    "build": "rm -rf dist/* ; webpack -p --progress --config=webpack/webpack.prod.js --mode production",
+    "clean": "rm -rf dist/"
   },
   "browserslist": [
     ">0.2%",
@@ -39,6 +35,32 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "dotenv": "^8.0.0"
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "css-loader": "^1.0.0",
+    "dotenv": "^8.0.0",
+    "eslint": "^5.3.0",
+    "eslint-config-react-tools": "1.x.x",
+    "file-loader": "^2.0.0",
+    "handlebars-loader": "^1.7.0",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "mini-css-extract-plugin": "^0.4.2",
+    "nodemon": "^1.19.1",
+    "react-hot-loader": "^4.3.6",
+    "serve": "^11.1.0",
+    "style-loader": "^0.23.0",
+    "typescript": "^3.5.3",
+    "url-loader": "^1.1.1",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.8.0",
+    "webpack-merge": "^4.2.1"
   }
 }

@@ -25,13 +25,6 @@ const oauth2Client = new google.auth.OAuth2(
   ['http://localhost']
 );
 
-const scopes = [
-  'https://www.googleapis.com/auth/gmail.send',
-  'https://www.googleapis.com/auth/gmail.compose',
-  'https://www.googleapis.com/auth/gmail.readonly',
-];
-
-
 router.post('/sendMail', async (req, res) => {
     
   oauth2Client.setCredentials({
