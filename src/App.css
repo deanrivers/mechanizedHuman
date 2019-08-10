@@ -55,6 +55,7 @@ html,body{
   /* top: -25px; */
   right: 0;
   font-size: 0.5em;
+  display: none;
 }
 
 #main{
@@ -188,7 +189,7 @@ height: 100%;
 }
 
 #twitter-feed-container{
-  margin-top: 7%;
+  /* margin-top: 7%; */
   max-width: 350px;
 }
 
@@ -197,25 +198,48 @@ height: 100%;
   padding: 10%;
   padding-top: 5%;
   /* border: 1px solid black; */
-  margin: 5%;
+  /* margin: 5%; */
 }
 
 #twitter-feed-container > ul > li{
-  border-radius: 10px;
+  /* border-radius: 10px; */
   /* background: rgb(233, 233, 233); */
   padding: 20px;
   margin-top: 10px;
   /* border: 1px solid; */
 }
 
-#twitter-feed-container > ul > li:nth-child(odd){
-  background: rgb(235, 235, 235);
+#twitter-feed-container > ul > li{
+  background: white;
+  /* border-top: 2px solid #1DA1f2; */
+  border-top: 2px solid #ccc;
+
+  margin-bottom: 0%;
+  animation-name: twitter-pop-down;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-in;
   
 }
-#twitter-feed-container > ul > li:nth-child(even){
+
+#twitter-feed-container > ul > li:hover{
+  animation-name: twitter-pop-up;
+  /* margin-bottom: 10%; */
+  animation-duration: 0.2s;
+  animation-timing-function: ease-out;
+  border-top: 5px solid rgb(88, 191, 255);
+  
+  cursor: pointer;
+  
+}
+
+#twitter-feed-container > ul > li > p{
+  margin: 0 auto;
+}
+/* #twitter-feed-container > ul > li:nth-child(even){
   background: #d6d6d6;
   
-}
+} */
+
 
 #contact{
   background: #D3F3EE;
@@ -510,4 +534,31 @@ height: 100%;
     
   }
   
+}
+
+/* animations */
+@keyframes twitter-pop-up{
+  0%{
+    /* margin-bottom: 0%; */
+    border-top: 1px solid #1DA1f2;
+    
+  }
+  100%{
+    /* margin-bottom: 10%; */
+    border-top: 5px solid rgb(88, 191, 255);
+   
+  }
+}
+@keyframes twitter-pop-down{
+  0%{
+    /* margin-bottom: 0%; */
+    
+    border-top: 5px solid rgb(88, 191, 255);
+    
+  }
+  100%{
+    /* margin-bottom: 10%; */
+    border-top: 2px solid #1DA1f2;
+   
+  }
 }
