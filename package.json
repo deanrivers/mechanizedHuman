@@ -35,10 +35,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-<<<<<<< HEAD
-    "dotenv": "^8.0.0",
-    "nodemon": "^1.19.1"
-=======
     "@babel/core": "^7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
@@ -66,6 +62,5 @@
     "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.8.0",
     "webpack-merge": "^4.2.1"
->>>>>>> 8957638a2832a713a8677aee9f739b30b87a169a
   }
 }
