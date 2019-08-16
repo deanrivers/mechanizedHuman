@@ -57,7 +57,7 @@
     "serve": "^11.1.0",
     "style-loader": "^0.23.0",
     "typescript": "^3.5.3",
-    "uglifyjs-webpack-plugin": "^2.2.0",
+    "uglifyjs-webpack-plugin": "^2.0.1",
     "url-loader": "^1.1.1",
     "webpack": "^4.39.1",
     "webpack-cli": "^3.3.6",
