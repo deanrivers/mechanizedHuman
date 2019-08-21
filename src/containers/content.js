@@ -14,7 +14,7 @@ class Content extends Component {
             background: this.props.color,
             padding: this.props.padding,
             zIndex: '1',
-            color: 'black',
+            color: this.props.color,
             float: this.props.float
         };
 
