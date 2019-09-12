@@ -296,7 +296,6 @@ height: 100%;
   /* background: white !important; */
 }
 
-
 /* nav bar style */
 #nav-container{
   position: fixed;
@@ -364,9 +363,16 @@ height: 100%;
   width: 100%;
   padding-bottom: 56.25%;
   overflow: hidden;
+<<<<<<< HEAD
   box-shadow: 2px 3px 3px 0px #b7b7b7;
 }
+=======
+>>>>>>> de491c10e8ecf2aab9b11cd0a2c18187273b158a
 
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 2px 3px 3px 0px #b7b7b7;
+}
 
 
 .iframe-container iframe {
@@ -493,8 +499,6 @@ height: 100%;
 
   .main-containers{
     margin-top: 5%;
-  
-    
   }
 
   .content-container{
@@ -528,7 +532,12 @@ height: 100%;
     overflow-y: auto;
   }
   #videos{
+<<<<<<< HEAD
     /* min-height: 300px; */
+=======
+    min-height: 300px;
+    /* background-color: #ffffff00 */
+>>>>>>> de491c10e8ecf2aab9b11cd0a2c18187273b158a
   }
   #twitter{
     min-height: 400px;

@@ -36,15 +36,38 @@ class TwitterFeed extends Component {
     })
   }
 
+  renderTweet = tweet => {
+    if(tweet['href'] && tweet['text']){
+      return [
+      <p>{tweet['text'] +'\n'}<a href={tweet['href']} rel="noopener noreferrer" target="_blank" >{tweet['href']}</a>  </p>,
+      <br/>,
+      <br/>,
+      <i>{tweet['timestamp']}</i>   
+      ]
+    }else if(tweet['href'] && !tweet['text']){
+      return[
+        <a href={tweet['href']} rel="noopener noreferrer" target="_blank" >{tweet['href']}</a>,
+        <br/>,
+        <br/>,
+        <i>{tweet['timestamp']}</i>  
+      ]
+    }else{
+      return[
+        <p>{tweet['text']}</p>,
+        <br/>,
+        <br/>,
+        <i>{tweet['timestamp']}</i>
+      ]
+    }
+  }
+
   render() {
     return (
       <div id="twitter-feed-container">
         <ul style={listStyle}>
-          
           { this.state.feed.map( tweet  => 
-              <li>
-                <p>{tweet['text']}</p>
-                <i>{tweet['created_at']}</i>     
+              <li id="twitterFeed">
+                {this.renderTweet(tweet)}
               </li>
           )}
         </ul>
@@ -55,4 +78,3 @@ class TwitterFeed extends Component {
 }
 
 export default TwitterFeed
-

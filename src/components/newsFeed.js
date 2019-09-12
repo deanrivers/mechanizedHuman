@@ -44,7 +44,7 @@ class NewsFeed extends Component {
         <ul style={listStyle}>
           { this.state.feed['items'].map( item  => 
               <li>
-                <a href={item['link']}><p>{item['title']}</p></a>
+                <a href={item['link']} rel="noopener noreferrer" target="_blank"><p>{item['title']}</p></a>
                 <i>{item['content']}</i>
                 
               </li>
