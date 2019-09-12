@@ -71,7 +71,7 @@ html,body{
  grid-column: 1/3;
  grid-row: 1/4;
  /* height: 725px; */
- 
+ min-height: 500px;
 }
 #countdown{
 grid-column: 3;
@@ -116,6 +116,7 @@ height: 100%;
   background: #fcbb6d;
   grid-column: 3;
   grid-row: 2/4;
+  height: auto;
 /* grid-column: 2/4; */
 /* height: 500px */
 /* background-image: linear-gradient(to bottom right, rgb(241, 241, 241),rgb(199, 199, 199)); */
@@ -188,7 +189,8 @@ height: 100%;
   
   grid-row: 4;
   /* max-height: 400px; */
-  background: rgb(255, 194, 194);
+  background: none !important;
+  box-shadow: none !important;
   /* overflow: hidden; */
   /* height: 40%; */
   
@@ -361,9 +363,8 @@ height: 100%;
   position: relative;
   width: 100%;
   padding-bottom: 56.25%;
-  /* box-shadow: 10px 10px; */
-  /* box-shadow: 2px 5px 4px 1px; */
   overflow: hidden;
+  box-shadow: 2px 3px 3px 0px #b7b7b7;
 }
 
 
@@ -455,6 +456,7 @@ height: 100%;
   max-height: 120px;
   resize: vertical;
   margin-bottom: 0;
+  min-height: 50px;
   /* width: 100%; */
 }
 
@@ -504,7 +506,7 @@ height: 100%;
   
   
   #headline{
-    min-height: 400px;
+    min-height: 300px;
   }
   #countdown{
     /* min-height: 100px;
@@ -526,7 +528,7 @@ height: 100%;
     overflow-y: auto;
   }
   #videos{
-    min-height: 300px;
+    /* min-height: 300px; */
   }
   #twitter{
     min-height: 400px;

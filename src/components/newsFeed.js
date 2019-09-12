@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 // import PropTypes from 'prop-types'
 
 let listStyle = {
-  maxHeight: '300px',
+  maxHeight: '350px',
   overflow: 'scroll'
 }
 

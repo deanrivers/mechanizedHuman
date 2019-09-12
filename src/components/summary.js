@@ -10,7 +10,18 @@ class Summary extends Component {
                 It serves to aggregate information, celebrate innovation, and promote a
                 future of robotics integrated societies.       
                 </p>
-               qui dolorem eum fugiat quo voluptas nulla pariatur?"
+               <p> 
+               ui dolorem eum fugiat quo voluptas nulla pariatur?"
+               ui dolorem eum fugiat quo voluptas nulla pariatur?"
+               ui dolorem eum fugiat quo voluptas nulla pariatur?"
+               ui dolorem eum fugiat quo voluptas nulla pariatur?"
+               ui dolorem eum fugiat quo voluptas nulla pariatur?"
+               ui dolorem eum fugiat quo voluptas nulla pariatur?"
+               ui dolorem eum fugiat quo voluptas nulla pariatur?"
+   
+               
+                   
+               </p>
             </div>
         );
     }
