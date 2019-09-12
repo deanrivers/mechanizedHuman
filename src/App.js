@@ -4,6 +4,7 @@ import Content from './containers/content';
 import VideoPlayer from './components/videoPlayer'
 import Loader from './components/preloader';
 import Summary from './components/summary'
+import Headline from './components/headline'
 
 import './App.css';
 
@@ -78,7 +79,7 @@ class App extends Component {
               <div id="grid">
     
                 <div className="main-containers" id="headline">
-                  <Content content="tese" text="Headline" padding="0px" float="left" color="#97FAE9"/>
+                  <Headline/>
                 </div>
     
                 <div className="main-containers" id="countdown">
