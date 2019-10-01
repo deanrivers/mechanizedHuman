@@ -3,6 +3,9 @@ import axios from 'axios'
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types'
 
+//images
+import newsFeed from '../assets/news-feed.png'
+
 
 
 
@@ -44,6 +47,7 @@ class NewsFeed extends Component {
   render() {
     return (
       <div id="news-feed-container">
+        <img src={newsFeed} id="news-feed-image"></img>
         <ul style={listStyle}>
           { this.state.feed['items'].map( item  => 
               <li>

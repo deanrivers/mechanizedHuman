@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 
+//images
+import coundownImage from '../assets/countdown.png'
+
 /**
  * Note : 
  * If you're using react v 15.4 or less
@@ -85,36 +88,43 @@ class Countdown extends Component {
     const countDown = this.state;
 
     return (
-      <div className="Countdown" id="countdown-container">
-        <span className="Countdown-col">
-          <span className="Countdown-col-element">
-            <span><strong>{this.addLeadingZeros(countDown.days)}</strong></span>
-              
-              <span>{countDown.days === 1 ? 'Day' : 'Days'}</span>
-          </span>
-        </span>
-
-        <span className="Countdown-col">
-          <span className="Countdown-col-element">
-            <strong>{this.addLeadingZeros(countDown.hours)}</strong>
-            <span>Hours</span>
-          </span>
-        </span>
+      <div id="countdown-parent-container">
+        <img src={coundownImage} id="countdown-image"/>
+        
 
 
-        <span className="Countdown-col">
-          <span className="Countdown-col-element">
-            <strong>{this.addLeadingZeros(countDown.min)}</strong>
-            <span>Min</span>
+      
+        <div className="Countdown" id="countdown-container">
+          <span className="Countdown-col">
+            <span className="Countdown-col-element">
+              <span><strong>{this.addLeadingZeros(countDown.days)}</strong></span>
+                
+                <span>{countDown.days === 1 ? 'Day' : 'Days'}</span>
+            </span>
           </span>
-        </span>
 
-        <span className="Countdown-col">
-          <span className="Countdown-col-element">
-            <strong>{this.addLeadingZeros(countDown.sec)}</strong>
-            <span>Sec</span>
+          <span className="Countdown-col">
+            <span className="Countdown-col-element">
+              <strong>{this.addLeadingZeros(countDown.hours)}</strong>
+              <span>Hours</span>
+            </span>
           </span>
-        </span>
+
+
+          <span className="Countdown-col">
+            <span className="Countdown-col-element">
+              <strong>{this.addLeadingZeros(countDown.min)}</strong>
+              <span>Min</span>
+            </span>
+          </span>
+
+          <span className="Countdown-col">
+            <span className="Countdown-col-element">
+              <strong>{this.addLeadingZeros(countDown.sec)}</strong>
+              <span>Sec</span>
+            </span>
+          </span>
+        </div>
       </div>
     );
   }

@@ -3,6 +3,9 @@ import axios from 'axios';
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 
+//image
+import twitterImage from '../assets/twitter.png'
+
 let listStyle = {
   maxHeight: '500px',
   overflow: 'scroll'
@@ -64,6 +67,7 @@ class TwitterFeed extends Component {
   render() {
     return (
       <div id="twitter-feed-container">
+        <img src={twitterImage} id="twitter-image"/>
         <ul style={listStyle}>
           { this.state.feed.map( tweet  => 
               <li id="twitterFeed">

@@ -85,14 +85,14 @@ class App extends Component {
                 <div className="main-containers" id="countdown">
                   <Content text="Countdown" 
                   content={<Countdown date={`${year}-04-04T00:00:00`} />}            
-                  padding="0px" float="right" color="#97FAE9"/>
+                  padding="0px" float="right" color="#616161"/>
                 </div>
     
                 <div className="main-containers" id="summary"><Content text="Summary" content={<Summary/>} padding="0px" float="right" color="#FFFFFF"/></div>
                 <div className="main-containers" id="news-feed"><Content content={<NewsFeed feed={this.state.newsFeed}/>}id="countdown-contatiner" text="News Feed" padding="0px" float="left" color="#FF7441"/></div>
-                <div className="iframe-container" id="videos"><VideoPlayer/></div>
+                <div className="iframe-container main-containers" id="videos"><VideoPlayer/></div>
                 <div className="main-containers" id="twitter"><Content text="Twitter" content={<TwitterFeed twitterFeed={this.state.twitterFeed} />} padding="0px" float="right" color="#65A2D9"/></div>
-                <div className="main-containers" id="contact"><Content content={<Contact/>} text="Contact" padding="0px" float="left" color="#ACE4AA"/></div>
+                <div className="main-containers" id="contact"><Content content={<Contact/>} text="Contact" padding="0px" float="left" color="#D3F3EE"/></div>
                 {/*<div className="main-containers" id="donate"><Content text="donate" padding="0px" float="left" color="white"/></div>
                 <div className="main-containers" id="empty-donate-right"><Content text="empty" padding="0px" float="right" color="purple"/></div>
                 <div className="main-containers" id="empty-donate-left"><Content text="empty" padding="0px" float="right" color="white"/></div> 

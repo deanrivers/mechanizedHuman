@@ -65,7 +65,7 @@ html,body{
 }
 
 #headline{
-  background: #d8737f;
+  background: #616161;
   /* background-image: linear-gradient(to bottom right, #E6F3FF,#873dff); */
  box-shadow: none;
  background: none !important;
@@ -77,10 +77,19 @@ html,body{
 #countdown{
 grid-column: 3;
 grid-row: 1/2;
-background: #475c7a;
+/* background: #cba545; */
 color: white;
 /* background-image: linear-gradient(to bottom right, white,#475c7a); */
 /* height: 100%; */
+}
+
+#countdown-parent-container{
+  position: relative;
+}
+#countdown-image{
+  height: 60%;
+  position: absolute;
+  transform: translate(60%,-130%)
 }
 
 #countdown-container{
@@ -138,7 +147,14 @@ color: white;
 #news-feed-container{
   /* margin-top: 7%; */
   max-width: 350px;
+  position: relative;
  
+}
+#news-feed-image{
+  position: absolute;
+  /* width: 80%; */
+  height: 10%;
+  transform: translate(-20%, -50%);
 }
 
 #news-feed-container > ul{
@@ -207,9 +223,17 @@ color: white;
   
 }
 
+#twitter-image{
+  /* width: 50%; */
+  height: 10%;
+  position: absolute;
+  transform: translate(130%, -40%);
+}
+
 #twitter-feed-container{
   /* margin-top: 7%; */
   max-width: 350px;
+  position: relative;
 }
 
 #twitter-feed-container > ul {
@@ -362,14 +386,10 @@ color: white;
 /* Youtube */
 .iframe-container {
   position: relative;
-  width: 100%;
+  /* width: 100%; */
   padding-bottom: 56.25%;
   overflow: hidden;
-  
 }
-
-
-
 
 .iframe-container iframe {
   position: absolute;
@@ -384,12 +404,18 @@ color: white;
 #summary-container{
   /* background: red; */
   margin: 5%;
-  overflow: hidden;
+  /* overflow: hidden; */
   height: 100%;
   max-height: 500px;
   padding: 5%;
   max-width: 300px;
+  position: relative;
 
+}
+#question-image{
+  position: absolute;
+  height: 20%;
+  transform: translate(325%, -30%);
 }
 
 #header{
@@ -408,7 +434,14 @@ color: white;
   padding: 15%;
   width: 100%;
   max-height: 320px;
+  position: relative;
+}
 
+#contact-image{
+  /* width: 30%; */
+  height: 10%;
+  position: absolute;
+  transform: translate(-70%, -285%);
 }
 
 #contact-form{
@@ -491,10 +524,18 @@ color: white;
 }
 
 #headline-words{
-  max-width: 50%;
+  max-width: 100%;
   position: absolute;
   z-index: 100;
+  transform: translate(-10%, -20%);
 }
+
+#headline-container{
+  position: relative;
+}
+
+
+
 /* apply display flex */
 @media only screen and (max-width: 1000px) {
 
@@ -537,6 +578,8 @@ color: white;
     
     
   }
+
+  
 
   #summary{
     min-height: 300px;
@@ -613,7 +656,7 @@ color: white;
   }
   100%{
     /* margin-bottom: 10%; */
-    border-top: 5px solid rgb(219, 88, 255);
+    border-top: 5px solid #db58ff;
    
   }
 }

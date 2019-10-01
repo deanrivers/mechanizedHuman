@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+//image
+import contactImage from '../assets/contact.png'
+
 class Contact extends Component {
 	constructor(props) {
 		super(props);
@@ -55,9 +58,11 @@ class Contact extends Component {
 	render() {
 		return (
 			<div id="contact-container">
+				<img src={contactImage} id="contact-image"/>
 				<form id="contact-form">
 					{/* <input id="name-field" className="text-field" type="text" name="firstname" placeholder="Name"></input> */}
 
+					<input className="text-field" type="name" name="name" placeholder="Name"></input>
 					<input className="text-field" type="email" name="email" placeholder="Email" onChange={this.updateEmail} ></input>
 					<textarea id="message-area" className="text-field" onKeyUp={this.updateMessage} maxLength="160" type="message" name="message" placeholder="Message..."></textarea>
 					<span id="character-count">You have {this.state.charactersRemaining} characters remaming.</span>
