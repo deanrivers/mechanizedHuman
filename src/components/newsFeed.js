@@ -4,14 +4,15 @@ import React, { Component } from 'react';
 // import PropTypes from 'prop-types'
 
 //images
-import newsFeed from '../assets/news-feed.png'
+
 
 
 
 
 let listStyle = {
   maxHeight: '350px',
-  overflow: 'scroll'
+  overflow: 'scroll',
+  marginTop: '12%'
 }
 
 
@@ -47,7 +48,7 @@ class NewsFeed extends Component {
   render() {
     return (
       <div id="news-feed-container">
-        <img src={newsFeed} id="news-feed-image"></img>
+        {/* <img src={newsFeed} id="news-feed-image"></img> */}
         <ul style={listStyle}>
           { this.state.feed['items'].map( item  => 
               <li>

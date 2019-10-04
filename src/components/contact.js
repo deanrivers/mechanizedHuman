@@ -58,7 +58,8 @@ class Contact extends Component {
 	render() {
 		return (
 			<div id="contact-container">
-				<img src={contactImage} id="contact-image"/>
+				{/* <img src={contactImage} id="contact-image"/> */}
+				{this.props.image}
 				<form id="contact-form">
 					{/* <input id="name-field" className="text-field" type="text" name="firstname" placeholder="Name"></input> */}
 

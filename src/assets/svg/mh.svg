@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Main" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 520.1 186.8" style="enable-background:new 0 0 520.1 186.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+	.st1{font-family:'CenturyGothic-Bold';}
+	.st2{font-size:139.0724px;}
+	.st3{fill:#FFFFFF;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+	.st4{font-size:78.689px;}
+</style>
+<font horiz-adv-x="2048">
+<!-- Century Gothic is a trademark of The Monotype Corporation plc. -->
+<!-- Copyright: Copyright 2019 Adobe System Incorporated. All rights reserved. -->
+<font-face font-family="CenturyGothic-Bold" units-per-em="2048" underline-position="-188" underline-thickness="184"/>
+<missing-glyph horiz-adv-x="1536" d="M256,0l0,1280l1024,0l0,-1280M288,32l960,0l0,1216l-960,0z"/>
+<glyph unicode="A" horiz-adv-x="1515" d="M616,1471l284,0l566,-1471l-291,0l-115,303l-600,0l-120,-303l-291,0M760,1081l-196,-505l391,0z"/>
+<glyph unicode="C" horiz-adv-x="1597" d="M1520,1212l-196,-187C1191,1166 1041,1236 874,1236C733,1236 615,1188 519,1092C422,996 374,878 374,737C374,639 395,552 438,476C481,400 541,340 619,297C697,254 784,232 879,232C960,232 1035,247 1102,278C1169,308 1243,363 1324,443l190,-198C1405,139 1303,66 1206,25C1109,-16 999,-37 875,-37C646,-37 459,36 314,181C168,326 95,511 95,738C95,885 128,1015 195,1129C261,1243 356,1335 480,1404C603,1473 736,1508 879,1508C1000,1508 1117,1482 1230,1431C1342,1380 1439,1307 1520,1212z"/>
+<glyph unicode="D" horiz-adv-x="1434" d="M169,1471l332,0C715,1471 874,1445 978,1392C1082,1339 1168,1252 1235,1133C1302,1014 1336,874 1336,715C1336,602 1317,498 1280,403C1242,308 1190,229 1124,166C1057,103 985,60 908,36C831,12 697,0 506,0l-337,0M448,1201l0,-927l130,0C706,274 799,289 857,318C914,347 961,397 998,466C1035,535 1053,621 1053,722C1053,878 1009,999 922,1085C843,1162 717,1201 543,1201z"/>
+<glyph unicode="E" horiz-adv-x="1065" d="M169,1471l803,0l0,-274l-525,0l0,-266l525,0l0,-269l-525,0l0,-387l525,0l0,-275l-803,0z"/>
+<glyph unicode="H" horiz-adv-x="1393" d="M167,1471l284,0l0,-555l492,0l0,555l283,0l0,-1471l-283,0l0,645l-492,0l0,-645l-284,0z"/>
+<glyph unicode="I" horiz-adv-x="573" d="M148,1471l278,0l0,-1471l-278,0z"/>
+<glyph unicode="M" horiz-adv-x="1843" d="M310,1471l274,0l340,-1026l345,1026l270,0l248,-1471l-270,0l-158,929l-313,-929l-247,0l-309,929l-161,-929l-273,0z"/>
+<glyph unicode="N" horiz-adv-x="1515" d="M169,1471l268,0l631,-968l0,968l280,0l0,-1471l-269,0l-630,965l0,-965l-280,0z"/>
+<glyph unicode="U" horiz-adv-x="1311" d="M158,1471l281,0l0,-952C439,437 446,379 461,345C475,311 499,284 532,264C565,243 604,233 651,233C700,233 743,244 779,267C814,290 839,319 853,354C866,389 873,455 873,554l0,917l281,0l0,-877C1154,446 1146,343 1129,286C1112,229 1081,173 1034,120C987,67 932,27 871,2C810,-24 738,-37 657,-37C550,-37 458,-12 379,37C300,86 243,147 209,221C175,294 158,419 158,594z"/>
+<glyph unicode="Z" horiz-adv-x="1024" d="M90,1471l890,0l-525,-1202l491,0l0,-269l-899,0l523,1194l-480,0z"/>
+</font>
+
+	<g id="HUMAN_1_">
+	<text id="BLACK_HUMAN" transform="matrix(1 0 0 1 5.0824 177.3766)" class="st0 st1 st2">HUMAN</text>
+	<text id="WHITE_HUMAN" transform="matrix(1 0 0 1 0.5 177.3817)" class="st3 st1 st2">HUMAN</text>
+</g>
+<g id="MECHANIZED">
+	<text id="BLACK_MH" transform="matrix(1 0 0 1 12.1277 68.093)" class="st0 st1 st4">MECHANIZED</text>
+	<text id="WHITE_MH" transform="matrix(1 0 0 1 7.5691 68.093)" class="st3 st1 st4">MECHANIZED</text>
+</g>
+</svg>

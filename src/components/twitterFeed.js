@@ -8,7 +8,8 @@ import twitterImage from '../assets/twitter.png'
 
 let listStyle = {
   maxHeight: '500px',
-  overflow: 'scroll'
+  overflow: 'scroll',
+  marginTop: '12%'
 }
 
 
@@ -67,7 +68,8 @@ class TwitterFeed extends Component {
   render() {
     return (
       <div id="twitter-feed-container">
-        <img src={twitterImage} id="twitter-image"/>
+        {/* <img src={twitterImage} id="twitter-image"/> */}
+        {this.props.image}
         <ul style={listStyle}>
           { this.state.feed.map( tweet  => 
               <li id="twitterFeed">

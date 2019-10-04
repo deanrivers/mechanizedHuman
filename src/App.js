@@ -14,6 +14,11 @@ import NewsFeed from './components/newsFeed';
 import TwitterFeed from './components/twitterFeed';
 import Contact from './components/contact';
 
+//images
+import newsFeed from './assets/svg/news-feed.svg'
+import contactImage from './assets/svg/contact.svg'
+import twitterImage from './assets/svg/twitter.svg'
+
 class App extends Component {
 
   constructor(props){
@@ -34,7 +39,7 @@ class App extends Component {
 
   newsFeedFetch = () => {
 
-    this.setState({loading:true})
+    this.setState({loading:false})
 
     axios.get("/.netlify/functions/server/fetchFeed")
     .then(response => {
@@ -89,10 +94,10 @@ class App extends Component {
                 </div>
     
                 <div className="main-containers" id="summary"><Content text="Summary" content={<Summary/>} padding="0px" float="right" color="#FFFFFF"/></div>
-                <div className="main-containers" id="news-feed"><Content content={<NewsFeed feed={this.state.newsFeed}/>}id="countdown-contatiner" text="News Feed" padding="0px" float="left" color="#FF7441"/></div>
+                <div className="main-containers" id="news-feed"><Content image={<img src={newsFeed} id="news-feed-image" className="svg-headers"/>} content={<NewsFeed feed={this.state.newsFeed}/>}id="countdown-contatiner" text="News Feed" padding="0px" float="left"/></div>
                 <div className="iframe-container main-containers" id="videos"><VideoPlayer/></div>
-                <div className="main-containers" id="twitter"><Content text="Twitter" content={<TwitterFeed twitterFeed={this.state.twitterFeed} />} padding="0px" float="right" color="#65A2D9"/></div>
-                <div className="main-containers" id="contact"><Content content={<Contact/>} text="Contact" padding="0px" float="left" color="#D3F3EE"/></div>
+                <div className="main-containers" id="twitter"><Content text="Twitter" image= {<img src={twitterImage} id="twitter-image" className="svg-headers"/>} content={<TwitterFeed twitterFeed={this.state.twitterFeed} />} padding="0px" float="right" color="#65A2D9"/></div>
+                <div className="main-containers" id="contact"><Content image={<img src={contactImage} id="contact-image" className="svg-headers"/>} content={<Contact/>} text="Contact" padding="0px" float="left" color="#D3F3EE"/></div>
                 {/*<div className="main-containers" id="donate"><Content text="donate" padding="0px" float="left" color="white"/></div>
                 <div className="main-containers" id="empty-donate-right"><Content text="empty" padding="0px" float="right" color="purple"/></div>
                 <div className="main-containers" id="empty-donate-left"><Content text="empty" padding="0px" float="right" color="white"/></div> 

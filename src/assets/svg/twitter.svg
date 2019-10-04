@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Main" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 310 85" style="enable-background:new 0 0 310 85;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#555555;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+	.st1{font-family:'CenturyGothic-Bold';}
+	.st2{font-size:101.6349px;}
+	.st3{fill:#65A2D9;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+</style>
+<font horiz-adv-x="2048">
+<!-- Century Gothic is a trademark of The Monotype Corporation plc. -->
+<!-- Copyright: Copyright 2019 Adobe System Incorporated. All rights reserved. -->
+<font-face font-family="CenturyGothic-Bold" units-per-em="2048" underline-position="-188" underline-thickness="184"/>
+<missing-glyph horiz-adv-x="1536" d="M256,0l0,1280l1024,0l0,-1280M288,32l960,0l0,1216l-960,0z"/>
+<glyph unicode="e" horiz-adv-x="1311" d="M1228,465l-877,0C364,388 398,326 453,281C508,235 578,212 663,212C765,212 853,248 926,319l230,-108C1099,130 1030,70 950,31C870,-8 775,-28 665,-28C494,-28 355,26 248,134C141,241 87,376 87,538C87,704 141,842 248,952C355,1061 489,1116 650,1116C821,1116 961,1061 1068,952C1175,842 1229,697 1229,517M954,680C936,741 901,790 848,828C795,866 733,885 663,885C587,885 520,864 463,821C427,794 394,747 363,680z"/>
+<glyph unicode="i" horiz-adv-x="491" d="M245,1536C293,1536 334,1519 369,1484C403,1449 420,1407 420,1358C420,1309 403,1268 369,1234C335,1199 294,1182 247,1182C198,1182 157,1200 123,1235C88,1270 71,1312 71,1362C71,1410 88,1451 122,1485C156,1519 197,1536 245,1536M108,1088l274,0l0,-1088l-274,0z"/>
+<glyph unicode="r" horiz-adv-x="655" d="M74,1088l234,0l0,-137C333,1005 367,1046 409,1074C451,1102 497,1116 547,1116C582,1116 619,1107 658,1088l-85,-235C541,869 515,877 494,877C452,877 417,851 388,799C359,747 344,645 344,493l1,-53l0,-440l-271,0z"/>
+<glyph unicode="t" horiz-adv-x="614" d="M171,1489l272,0l0,-401l162,0l0,-235l-162,0l0,-853l-272,0l0,853l-140,0l0,235l140,0z"/>
+<glyph unicode="w" horiz-adv-x="1638" d="M17,1088l267,0l219,-619l236,619l163,0l231,-612l219,612l269,0l-397,-1088l-173,0l-232,620l-239,-620l-171,0z"/>
+</font>
+
+	<text id="back_news_feed" transform="matrix(1 0 0 1 9.0198 80.9613)" class="st0 st1 st2">twitter</text>
+<text id="front_news_feed" transform="matrix(1 0 0 1 3.0197 80.9612)" class="st3 st1 st2">twitter</text>
+</svg>

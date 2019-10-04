@@ -15,7 +15,8 @@ class Content extends Component {
             padding: this.props.padding,
             zIndex: '1',
             color: this.props.color,
-            float: this.props.float
+            float: this.props.float,
+            height: '100%'
         };
 
         let contentStyle = {
@@ -29,13 +30,8 @@ class Content extends Component {
 
         return (
 
-            <div className="content-container" id={this.props.text}>
-                <div className="description-container"></div>
-                
-                <div className="title-container" style={style}>
-                    <p className="content-title" >{this.props.text}</p>
-                </div>
-
+            <div className="content-container" id={this.props.text}>                
+                {this.props.image}
                 <div style={contentStyle}>
                     {this.props.content}
                 </div>

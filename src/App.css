@@ -24,7 +24,10 @@ html,body{
   grid-template-columns: 1fr 1fr 1fr;
   /* grid-auto-rows: minmax(200px,auto); */
   grid-gap: 10px;
-  margin: 12% 10% 0% 10%;
+  /* margin: 12% 10% 0% 10%; */
+  margin: 0 auto;
+  padding-top: 10%;
+  max-width: 70%;
   
 
 }
@@ -51,21 +54,21 @@ html,body{
 }
 
 .title-container{
-  position: absolute;
+  
   /* top: -25px; */
   right: 0;
   font-size: 0.5em;
-  display: none;
+  
 }
 
 #main{
   height: 100vh;
   /* width: 100vw; */
-  position: absolute;
+  /* position: absolute; */
 }
 
 #headline{
-  background: #616161;
+  background: #d8737f;
   /* background-image: linear-gradient(to bottom right, #E6F3FF,#873dff); */
  box-shadow: none;
  background: none !important;
@@ -153,8 +156,10 @@ color: white;
 #news-feed-image{
   position: absolute;
   /* width: 80%; */
-  height: 10%;
+  
   transform: translate(-20%, -50%);
+  z-index: 100;
+
 }
 
 #news-feed-container > ul{
@@ -178,15 +183,18 @@ color: white;
 
 #news-feed-container > ul > li{
   background: white;
-  border-top: 2px solid #ccc;
+  border-top: 5px solid #ccc;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
   animation-name: news-pop-down; 
-  animation-duration: 0.1s;
+  animation-duration: 0.2s;
   animation-timing-function: ease-in;
+  transition: box-shadow 0.2s ease-in-out
   
 }
 #news-feed-container > ul > li:hover{
   
   border-top: 5px solid rgb(219, 88, 255);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
   animation-name: news-pop-up; 
   animation-duration: 0.2s;
   animation-timing-function: ease-out;
@@ -225,9 +233,9 @@ color: white;
 
 #twitter-image{
   /* width: 50%; */
-  height: 10%;
+  height: 9%;
   position: absolute;
-  transform: translate(130%, -40%);
+  transform: translate(85%, -50%);
 }
 
 #twitter-feed-container{
@@ -255,21 +263,24 @@ color: white;
 #twitter-feed-container > ul > li{
   background: white;
   /* border-top: 2px solid #1DA1f2; */
-  border-top: 2px solid #ccc;
-
+  border-top: 5px solid #ccc;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
   margin-bottom: 0%;
   animation-name: twitter-pop-down;
-  animation-duration: 0.1s;
+  animation-duration: 0.2s;
   animation-timing-function: ease-in;
+  transition: box-shadow 0.2s ease-in-out
   
 }
 
 #twitter-feed-container > ul > li:hover{
+  
   animation-name: twitter-pop-up;
   /* margin-bottom: 10%; */
   animation-duration: 0.2s;
   animation-timing-function: ease-out;
   border-top: 5px solid rgb(88, 191, 255);
+  box-shadow: 0 5px 10px rgba(0,0,0,0.3);
   
   cursor: pointer;
   
@@ -318,6 +329,7 @@ color: white;
   margin: 10px;
   border-radius: 5px;
   box-shadow: 2px 3px 3px 0px #b7b7b7;
+  position: relative;
   /* background: white !important; */
 }
 
@@ -438,10 +450,9 @@ color: white;
 }
 
 #contact-image{
-  /* width: 30%; */
-  height: 10%;
   position: absolute;
-  transform: translate(-70%, -285%);
+  transform: translate(-20%, -50%);
+  height: 9%;
 }
 
 #contact-form{
@@ -514,8 +525,11 @@ color: white;
 }
 
 #logo-words-image{
-  max-width: 100%;
-  max-height: 100%;
+  /* max-width: 100%;
+  max-height: 100%; */
+  height: 100%;
+  width: 100%;
+  
 }
 
 #logo-words-container{
@@ -534,10 +548,19 @@ color: white;
   position: relative;
 }
 
+.svg-headers{
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 10%;
+}
+
 
 
 /* apply display flex */
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1200px) {
 
   .App{
     overflow-x: hidden;
@@ -549,10 +572,11 @@ color: white;
     width: 100%;
     min-width: 300px;
     /* min-width: 100%; */
+    padding-top: 20%;
     
     
     margin: 0 auto;
-    margin-top: 22% !important;
+    /* margin-top: 22% !important; */
     
   }
 
@@ -574,8 +598,6 @@ color: white;
   #countdown{
     /* min-height: 100px;
     max-height: 100px; */
-    
-    
     
   }
 
@@ -624,7 +646,7 @@ color: white;
 @keyframes twitter-pop-up{
   0%{
     /* margin-bottom: 0%; */
-    border-top: 1px solid #ccc
+    border-top: 5px solid #ccc
     
   }
   100%{
@@ -642,7 +664,7 @@ color: white;
   }
   100%{
     /* margin-bottom: 10%; */
-    border-top: 2px solid #1DA1f2;
+    border-top: 5px solid #ccc;
    
   }
 }
@@ -651,12 +673,13 @@ color: white;
 @keyframes news-pop-up{
   0%{
     /* margin-bottom: 0%; */
-    border-top: 1px solid #ccc;
+    border-top: 5px solid #ccc;
     
   }
   100%{
     /* margin-bottom: 10%; */
     border-top: 5px solid #db58ff;
+    
    
   }
 }
@@ -669,7 +692,7 @@ color: white;
   }
   100%{
     /* margin-bottom: 10%; */
-    border-top: 1px solid #ccc;
+    border-top: 5px solid #ccc;
    
   }
 }
