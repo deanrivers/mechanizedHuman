@@ -1,23 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+
 html,body{
   background-color: #ffffff;
   /* height: 100vh; */
   position: relative;
   width: 100%;
+  font-family: 'Roboto', sans-serif;
+  /* font-family: 'Titillium Web', sans-serif; */
 }
-
-
-
-
-/* .App {
-  
-  height: 100vh;
-  
-  color: white;
-  text-align: center;
-
-} */
-
-
 /* Added */
 #grid{
   display: grid;
@@ -27,38 +18,24 @@ html,body{
   /* margin: 12% 10% 0% 10%; */
   margin: 0 auto;
   padding-top: 10%;
-  max-width: 70%;
-  
-
+  max-width: 80%;
+  padding-bottom: 5%;
 }
 
-
-
 .content-container{
-  /* background: red; */
-  
-  
-  /* background: rgb(85, 85, 85); */
   position: relative;
   height: 100%;
- 
-  
-  /* margin: 2%; */
 }
 
 .description-container{
   background: black;
-  
   top: 0;
   left: 0;
 }
 
 .title-container{
-  
-  /* top: -25px; */
   right: 0;
   font-size: 0.5em;
-  
 }
 
 #main{
@@ -80,29 +57,26 @@ html,body{
 #countdown{
 grid-column: 3;
 grid-row: 1/2;
-/* background: #cba545; */
 color: white;
-/* background-image: linear-gradient(to bottom right, white,#475c7a); */
-/* height: 100%; */
+background-image: linear-gradient(to bottom right, white,#475c7a);
+background: grey;
 }
 
 #countdown-parent-container{
   position: relative;
 }
+
 #countdown-image{
-  height: 60%;
+  height: 40%;
   position: absolute;
-  transform: translate(60%,-130%)
+  transform: translate(25%,-70%)
 }
 
 #countdown-container{
-
   font-size: 1.0em;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serifl;
-  /* font-family: 'Ubuntu', sans-serif; */
+  /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serifl; */
   display: flex;
-  flex-direction: row;
-  
+  flex-direction: row;  
 }
 
 #countdown > .content-container{
@@ -145,6 +119,11 @@ color: white;
   grid-column: 1/2;
   grid-row: 4;
   
+}
+
+#news-feed-content{
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 #news-feed-container{
@@ -252,7 +231,7 @@ color: white;
   /* margin: 5%; */
 }
 
-#twitter-feed-container > ul > li{
+.twitterFeed-item{
   /* border-radius: 10px; */
   /* background: rgb(233, 233, 233); */
   padding: 20px;
@@ -260,7 +239,7 @@ color: white;
   /* border: 1px solid; */
 }
 
-#twitter-feed-container > ul > li{
+.twitterFeed-item{
   background: white;
   /* border-top: 2px solid #1DA1f2; */
   border-top: 5px solid #ccc;
@@ -427,7 +406,7 @@ color: white;
 #question-image{
   position: absolute;
   height: 20%;
-  transform: translate(325%, -30%);
+  transform: translate(330%, -30%);
 }
 
 #header{
@@ -473,12 +452,28 @@ color: white;
   padding: 5px;
   background: none;
   width: 100%;
-  
-}
 
+
+}
 .text-field:focus{
   border-bottom: 2px solid #2cc7b5;
 }
+
+
+
+input:-webkit-autofill {
+  box-shadow: 0 0 0 50px #b8ebe3 inset;
+  -webkit-box-shadow:0 0 0 50px #b8ebe3 inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: #333;
+}
+
+input:-webkit-autofill:focus {
+  box-shadow: 0 0 0 50px #b8ebe3 inset;
+  -webkit-box-shadow: 0 0 0 50px #b8ebe3 inset;/*your box-shadow*/
+  -webkit-text-fill-color: #333;
+} 
+
+
 
 #submit-button{
   transition: background-color 0.4s;
@@ -572,7 +567,7 @@ color: white;
     width: 100%;
     min-width: 300px;
     /* min-width: 100%; */
-    padding-top: 20%;
+    padding-top: 25%;
     
     
     margin: 0 auto;
@@ -610,9 +605,9 @@ color: white;
 
   #news-feed{
     min-height: 370px;
-    max-height: 400px;
-    overflow-x: hidden;
-    overflow-y: auto;
+    
+    /* overflow-x: hidden;
+    overflow-y: auto; */
   }
   #videos{
     /* min-height: 300px; */
@@ -637,6 +632,15 @@ color: white;
   #main{
     /* max-width: 500px; */
     
+  }
+
+  .iframe-container iframe{
+    position: relative;
+  }
+  #videos{
+    padding: 0;
+    margin-bottom: 10%;
+    margin-top: 10%;
   }
   
 }

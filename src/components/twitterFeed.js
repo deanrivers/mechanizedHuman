@@ -72,7 +72,7 @@ class TwitterFeed extends Component {
         {this.props.image}
         <ul style={listStyle}>
           { this.state.feed.map( tweet  => 
-              <li id="twitterFeed">
+              <li className="twitterFeed-item">
                 {this.renderTweet(tweet)}
               </li>
           )}

@@ -18,6 +18,8 @@ import Contact from './components/contact';
 import newsFeed from './assets/svg/news-feed.svg'
 import contactImage from './assets/svg/contact.svg'
 import twitterImage from './assets/svg/twitter.svg'
+import countdownImage from './assets/svg/countdown.svg'
+import questionMarks from './assets/svg/question-marks.svg'
 
 class App extends Component {
 
@@ -89,12 +91,13 @@ class App extends Component {
     
                 <div className="main-containers" id="countdown">
                   <Content text="Countdown" 
-                  content={<Countdown date={`${year}-04-04T00:00:00`} />}            
-                  padding="0px" float="right" color="#616161"/>
+                  content={<Countdown date={`${year}-04-04T00:00:00`}/>}            
+                  padding="0px" float="right" color="#616161"
+                  image={<img src={countdownImage} className="svg-headers" id="countdown-image"/>}/>
                 </div>
     
-                <div className="main-containers" id="summary"><Content text="Summary" content={<Summary/>} padding="0px" float="right" color="#FFFFFF"/></div>
-                <div className="main-containers" id="news-feed"><Content image={<img src={newsFeed} id="news-feed-image" className="svg-headers"/>} content={<NewsFeed feed={this.state.newsFeed}/>}id="countdown-contatiner" text="News Feed" padding="0px" float="left"/></div>
+                <div className="main-containers" id="summary"><Content text="Summary" image={<img src={questionMarks} id="question-image" className="svg-headers"/>} content={<Summary/>} padding="0px" float="right" color="#FFFFFF"/></div>
+                <div className="main-containers" id="news-feed"><Content image={<img src={newsFeed} id="news-feed-image" className="svg-headers"/>} content={<NewsFeed feed={this.state.newsFeed}/>}id="countdown-contatiner" text="news-feed-content" padding="0px" float="left"/></div>
                 <div className="iframe-container main-containers" id="videos"><VideoPlayer/></div>
                 <div className="main-containers" id="twitter"><Content text="Twitter" image= {<img src={twitterImage} id="twitter-image" className="svg-headers"/>} content={<TwitterFeed twitterFeed={this.state.twitterFeed} />} padding="0px" float="right" color="#65A2D9"/></div>
                 <div className="main-containers" id="contact"><Content image={<img src={contactImage} id="contact-image" className="svg-headers"/>} content={<Contact/>} text="Contact" padding="0px" float="left" color="#D3F3EE"/></div>

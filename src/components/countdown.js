@@ -89,7 +89,7 @@ class Countdown extends Component {
 
     return (
       <div id="countdown-parent-container">
-        <img src={coundownImage} id="countdown-image"/>
+        {/* <img src={coundownImage} id="countdown-image"/> */}
         
 
 
