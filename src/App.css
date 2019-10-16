@@ -210,7 +210,7 @@ background: grey;
   /* width: 50%; */
   height: 9%;
   position: absolute;
-  transform: translate(85%, -50%);
+  transform: translate(100%, -50%);
 }
 
 #twitter-feed-container{
@@ -599,6 +599,10 @@ input:-webkit-autofill:focus {
     /* overflow-x: hidden;
     overflow-y: auto; */
   }
+  #news-feed-image{
+    height: 6%;
+    transform: translate(-10%, -50%);
+  }
   #videos{
     /* min-height: 300px; */
   }
@@ -634,11 +638,20 @@ input:-webkit-autofill:focus {
   }
 
   #question-image{
-    transform: translate(300%, -30%);
+    transform: translate(330%, -30%);
+    height: 17%;
   }
 
   #countdown-image{
-    transform: translate(55%,-70%);
+    transform: translate(40%,-70%);
+  }
+
+  #twitter-image{
+    height: 7%;
+    transform: translate(105%, -50%);
+  }
+  #contact-image{
+    transform: translate(-15%, -50%);
   }
   
 }
