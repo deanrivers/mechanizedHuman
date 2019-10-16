@@ -13,13 +13,11 @@ html,body{
 #grid{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  /* grid-auto-rows: minmax(200px,auto); */
-  grid-gap: 10px;
-  /* margin: 12% 10% 0% 10%; */
   margin: 0 auto;
   padding-top: 10%;
   max-width: 80%;
   padding-bottom: 5%;
+  grid-row-gap: 20px;
 }
 
 .content-container{
@@ -40,8 +38,6 @@ html,body{
 
 #main{
   height: 100vh;
-  /* width: 100vw; */
-  /* position: absolute; */
 }
 
 #headline{
@@ -69,7 +65,7 @@ background: grey;
 #countdown-image{
   height: 40%;
   position: absolute;
-  transform: translate(25%,-70%)
+  transform: translate(10%,-70%)
 }
 
 #countdown-container{
@@ -117,7 +113,7 @@ background: grey;
   /* width: 300px; */
   /* height: 80%; */
   grid-column: 1/2;
-  grid-row: 4;
+  grid-row: 4/5;
   
 }
 
@@ -232,16 +228,10 @@ background: grey;
 }
 
 .twitterFeed-item{
-  /* border-radius: 10px; */
-  /* background: rgb(233, 233, 233); */
+  background: white;
   padding: 20px;
   margin-top: 10px;
-  /* border: 1px solid; */
-}
-
-.twitterFeed-item{
-  background: white;
-  /* border-top: 2px solid #1DA1f2; */
+  cursor: default !important;
   border-top: 5px solid #ccc;
   box-shadow: 0 1px 2px rgba(0,0,0,0.15);
   margin-bottom: 0%;
@@ -253,9 +243,7 @@ background: grey;
 }
 
 #twitter-feed-container > ul > li:hover{
-  
   animation-name: twitter-pop-up;
-  /* margin-bottom: 10%; */
   animation-duration: 0.2s;
   animation-timing-function: ease-out;
   border-top: 5px solid rgb(88, 191, 255);
@@ -496,7 +484,7 @@ input:-webkit-autofill:focus {
   /* min-height: 100px; */
   height: 20px;
   max-height: 120px;
-  resize: vertical;
+  resize: none;
   margin-bottom: 0;
   min-height: 50px;
   /* width: 100%; */
@@ -535,6 +523,7 @@ input:-webkit-autofill:focus {
 #headline-words{
   max-width: 100%;
   position: absolute;
+  height: 60%;
   z-index: 100;
   transform: translate(-10%, -20%);
 }
@@ -555,7 +544,7 @@ input:-webkit-autofill:focus {
 
 
 /* apply display flex */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 800px) {
 
   .App{
     overflow-x: hidden;
@@ -577,6 +566,7 @@ input:-webkit-autofill:focus {
 
   .main-containers{
     margin-top: 5%;
+    max-width: 310px;
   }
 
   .content-container{
@@ -641,6 +631,14 @@ input:-webkit-autofill:focus {
     padding: 0;
     margin-bottom: 10%;
     margin-top: 10%;
+  }
+
+  #question-image{
+    transform: translate(300%, -30%);
+  }
+
+  #countdown-image{
+    transform: translate(55%,-70%);
   }
   
 }

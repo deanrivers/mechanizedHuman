@@ -21,6 +21,7 @@ import twitterImage from './assets/svg/twitter.svg'
 import countdownImage from './assets/svg/countdown.svg'
 import questionMarks from './assets/svg/question-marks.svg'
 
+
 class App extends Component {
 
   constructor(props){
@@ -86,6 +87,7 @@ class App extends Component {
               <div id="grid">
     
                 <div className="main-containers" id="headline">
+                  
                   <Headline/>
                 </div>
     
