@@ -78,7 +78,6 @@ background: grey;
 #countdown > .content-container{
   display: flex;
   justify-content: center;
-  
 }
 
 #Countdown > div:nth-child(3){
