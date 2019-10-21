@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Main" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 378 186.8" style="enable-background:new 0 0 378 186.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+	.st1{font-family:'CenturyGothic-Bold';}
+	.st2{font-size:237.1307px;}
+	.st3{fill:#FFFFFF;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+</style>
+<font horiz-adv-x="2048">
+<!-- Century Gothic is a trademark of The Monotype Corporation plc. -->
+<!-- Copyright: Copyright 2019 Adobe System Incorporated. All rights reserved. -->
+<font-face font-family="CenturyGothic-Bold" units-per-em="2048" underline-position="-188" underline-thickness="184"/>
+<missing-glyph horiz-adv-x="1536" d="M256,0l0,1280l1024,0l0,-1280M288,32l960,0l0,1216l-960,0z"/>
+<glyph unicode="H" horiz-adv-x="1393" d="M167,1471l284,0l0,-555l492,0l0,555l283,0l0,-1471l-283,0l0,645l-492,0l0,-645l-284,0z"/>
+<glyph unicode="M" horiz-adv-x="1843" d="M310,1471l274,0l340,-1026l345,1026l270,0l248,-1471l-270,0l-158,929l-313,-929l-247,0l-309,929l-161,-929l-273,0z"/>
+</font>
+
+	<g id="MECHANIZED">
+	<text id="BLACK_MH" transform="matrix(1 0 0 1 13.7393 179.3856)" class="st0 st1 st2">MH</text>
+	<text id="WHITE_MH" transform="matrix(1 0 0 1 1.811981e-05 179.3856)" class="st3 st1 st2">MH</text>
+</g>
+</svg>

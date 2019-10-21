@@ -97,31 +97,31 @@ class Countdown extends Component {
         <div className="Countdown" id="countdown-container">
           <span className="Countdown-col">
             <span className="Countdown-col-element">
-              <span><strong>{this.addLeadingZeros(countDown.days)}</strong></span>
+              <span><span className="countdown-number">{this.addLeadingZeros(countDown.days)}</span></span>
                 
-                <span>{countDown.days === 1 ? 'Day' : 'Days'}</span>
+                <span className="countdown-words">{countDown.days === 1 ? 'Day' : 'Days'}</span>
             </span>
           </span>
 
           <span className="Countdown-col">
             <span className="Countdown-col-element">
-              <strong>{this.addLeadingZeros(countDown.hours)}</strong>
-              <span>Hours</span>
+              <span className="countdown-number">{this.addLeadingZeros(countDown.hours)}</span>
+              <span className="countdown-words">Hours</span>
             </span>
           </span>
 
 
           <span className="Countdown-col">
             <span className="Countdown-col-element">
-              <strong>{this.addLeadingZeros(countDown.min)}</strong>
-              <span>Min</span>
+              <span className="countdown-number">{this.addLeadingZeros(countDown.min)}</span>
+              <span className="countdown-words">Min</span>
             </span>
           </span>
 
           <span className="Countdown-col">
             <span className="Countdown-col-element">
-              <strong>{this.addLeadingZeros(countDown.sec)}</strong>
-              <span>Sec</span>
+              <span className="countdown-number">{this.addLeadingZeros(countDown.sec)}</span>
+              <span className="countdown-words">Sec</span>
             </span>
           </span>
         </div>

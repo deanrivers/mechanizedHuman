@@ -1,18 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import axios from 'axios'
-import Content from './containers/content';
+import lottie from 'lottie-web'
+
+
+
+import Content from './containers/content'
 import VideoPlayer from './components/videoPlayer'
-import Loader from './components/preloader';
+import Loader from './components/preloader'
 import Summary from './components/summary'
 import Headline from './components/headline'
+import Donate from './components/donate'
 
 import './App.css';
 
-import Nav from './containers/nav';
-import Countdown from './components/countdown';
-import NewsFeed from './components/newsFeed';
-import TwitterFeed from './components/twitterFeed';
-import Contact from './components/contact';
+import Nav from './containers/nav'
+import Countdown from './components/countdown'
+import NewsFeed from './components/newsFeed'
+import TwitterFeed from './components/twitterFeed'
+import Contact from './components/contact'
 
 //images
 import newsFeed from './assets/svg/news-feed.svg'
@@ -30,7 +35,7 @@ class App extends Component {
     this.state = {
       newsFeed : [],
       twitterFeed : [],
-      loading: true
+      loading: false
     }
 
   }
@@ -42,7 +47,7 @@ class App extends Component {
 
   newsFeedFetch = () => {
 
-    this.setState({loading:false})
+    this.setState({loading:true})
 
     axios.get("/.netlify/functions/server/fetchFeed")
     .then(response => {
@@ -82,6 +87,7 @@ class App extends Component {
     } else {
         return (
           <div className="App">
+            
             <div id="main">
               <Nav/>
               <div id="grid">
@@ -101,8 +107,10 @@ class App extends Component {
                 <div className="main-containers" id="summary"><Content text="Summary" image={<img src={questionMarks} id="question-image" className="svg-headers"/>} content={<Summary/>} padding="0px" float="right" color="#FFFFFF"/></div>
                 <div className="main-containers" id="news-feed"><Content image={<img src={newsFeed} id="news-feed-image" className="svg-headers"/>} content={<NewsFeed feed={this.state.newsFeed}/>}id="countdown-contatiner" text="news-feed-content" padding="0px" float="left"/></div>
                 <div className="iframe-container main-containers" id="videos"><VideoPlayer/></div>
+                {/* <div className="main-container" id="donate"><Content content={<Donate/>}/></div> */}
                 <div className="main-containers" id="twitter"><Content text="Twitter" image= {<img src={twitterImage} id="twitter-image" className="svg-headers"/>} content={<TwitterFeed twitterFeed={this.state.twitterFeed} />} padding="0px" float="right" color="#65A2D9"/></div>
                 <div className="main-containers" id="contact"><Content image={<img src={contactImage} id="contact-image" className="svg-headers"/>} content={<Contact/>} text="Contact" padding="0px" float="left" color="#D3F3EE"/></div>
+               
                 {/*<div className="main-containers" id="donate"><Content text="donate" padding="0px" float="left" color="white"/></div>
                 <div className="main-containers" id="empty-donate-right"><Content text="empty" padding="0px" float="right" color="purple"/></div>
                 <div className="main-containers" id="empty-donate-left"><Content text="empty" padding="0px" float="right" color="white"/></div> 
