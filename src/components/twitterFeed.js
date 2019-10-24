@@ -1,6 +1,7 @@
 
 import axios from 'axios';
 import React, { Component } from 'react';
+
 // import PropTypes from 'prop-types';
 
 //image
@@ -67,17 +68,17 @@ class TwitterFeed extends Component {
 
   render() {
     return (
-      <div id="twitter-feed-container">
-        {/* <img src={twitterImage} id="twitter-image"/> */}
-        {this.props.image}
-        <ul style={listStyle}>
-          { this.state.feed.map( tweet  => 
-              <li className="twitterFeed-item">
-                {this.renderTweet(tweet)}
-              </li>
-          )}
-        </ul>
-    </div>
+        <div id="twitter-feed-container">
+          {/* <img src={twitterImage} id="twitter-image"/> */}
+          {this.props.image}
+          <ul style={listStyle}>
+            { this.state.feed.map( tweet  => 
+                <li className="twitterFeed-item">
+                  {this.renderTweet(tweet)}
+                </li>
+            )}
+          </ul>
+      </div>
     )
   }
 

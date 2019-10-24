@@ -32,7 +32,7 @@ class Loader extends Component {
         renderer: 'svg',
         loop: false,
         autoplay: true,
-        path: 'https://api.myjson.com/bins/19drok'// the path to the animation json
+        path: 'https://api.myjson.com/bins/xo2ic'// the path to the animation json
         //path: 'https://labs.nearpod.com/bodymovin/demo/markus/isometric/markus2.json' // the path to the animation json
     });
 

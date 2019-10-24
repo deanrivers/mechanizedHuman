@@ -25,6 +25,7 @@ import contactImage from './assets/svg/contact.svg'
 import twitterImage from './assets/svg/twitter.svg'
 import countdownImage from './assets/svg/countdown.svg'
 import questionMarks from './assets/svg/question-marks.svg'
+import donateImage from './assets/svg/donate.svg'
 
 
 class App extends Component {
@@ -65,7 +66,7 @@ class App extends Component {
       this.setState({twitterFeed : response.data})
       setTimeout( () => {
         this.setState({ loading: false })
-      }, 2000)
+      }, 2200)
 
     })
     .catch(e => {
@@ -107,8 +108,16 @@ class App extends Component {
                 <div className="main-containers" id="summary"><Content text="Summary" image={<img src={questionMarks} id="question-image" className="svg-headers"/>} content={<Summary/>} padding="0px" float="right" color="#FFFFFF"/></div>
                 <div className="main-containers" id="news-feed"><Content image={<img src={newsFeed} id="news-feed-image" className="svg-headers"/>} content={<NewsFeed feed={this.state.newsFeed}/>}id="countdown-contatiner" text="news-feed-content" padding="0px" float="left"/></div>
                 <div className="iframe-container main-containers" id="videos"><VideoPlayer/></div>
-                {/* <div className="main-container" id="donate"><Content content={<Donate/>}/></div> */}
-                <div className="main-containers" id="twitter"><Content text="Twitter" image= {<img src={twitterImage} id="twitter-image" className="svg-headers"/>} content={<TwitterFeed twitterFeed={this.state.twitterFeed} />} padding="0px" float="right" color="#65A2D9"/></div>
+                {/* <div className="main-container" id="donate"><Content image={<img src={donateImage} id="donate-image" className="svg-headers"/>} content={<Donate/>}/></div> */}
+
+
+                <div className="main-containers" id="twitter">
+                  {/* <Content content={<Donate/>} masterID="donate-container" image={<img src={donateImage} id="donate-image" className="svg-headers"/>}/> */}
+                  <Content text="Twitter" image={<img src={twitterImage} id="twitter-image" className="svg-headers"/>} content={<TwitterFeed twitterFeed={this.state.twitterFeed} />} padding="0px" float="right" color="#65A2D9"/>
+                  
+                  </div>
+                
+                
                 <div className="main-containers" id="contact"><Content image={<img src={contactImage} id="contact-image" className="svg-headers"/>} content={<Contact/>} text="Contact" padding="0px" float="left" color="#D3F3EE"/></div>
                
                 {/*<div className="main-containers" id="donate"><Content text="donate" padding="0px" float="left" color="white"/></div>

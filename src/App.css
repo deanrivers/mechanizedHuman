@@ -208,11 +208,19 @@ background: grey;
 #twitter{
   grid-row: 5;
   grid-column: 3;
-  background: #E6F3FF;
+  /* background: #E6F3FF; */
   background-image: linear-gradient(to bottom right, E6F3FF,#1da1f2);
   /* height: 500px; */
   /* grid-row: 3/5; */
   
+}
+#donate-container{
+  background: white;
+  margin-bottom: 20%;
+  border-radius: 10%;
+}
+.content-container > #Twitter{
+  background: #E6F3FF;
 }
 
 #twitter-image{
@@ -289,19 +297,32 @@ background: grey;
   grid-column: 3;
 }
 
-#empty-donate-left{
-  background: #fd6bdd;
-  grid-row: 10;
-  grid-column: 3;
+#donate-button{
+  transition: background-color 0.4s;
+  /* background: linear-gradient(-135deg, #64ffed, #2cc7b5); */
+  background: #2cc7b5;
+  /* background: linear-gradient(-135deg, #d5007d, #e53935, #d5007d, #e53935); */
+  /* background: #38c2b2; */
+  color: white;
+  width: 50%;
+  height: 45px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  margin: 0 auto;
+  font-size: 15px;
 }
 
-#donate2{
-  background: rgb(138, 138, 138);
-  grid-row: 10;
+#donate-button:hover{
+  /* background-image: linear-gradient(-135deg,  #2cc7b5,#64ffed); */
+  background: #53d1c2;
+  cursor: pointer;
 }
+
 
 .main-containers{
-  background: rgb(255, 173, 173);
+  /* background: rgb(255, 173, 173); */
   margin: 10px;
   border-radius: 5px;
   box-shadow: 2px 3px 3px 0px #b7b7b7;

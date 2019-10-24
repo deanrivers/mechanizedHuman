@@ -30,7 +30,7 @@ class Content extends Component {
 
         return (
 
-            <div className="content-container">                
+            <div className="content-container" id={this.props.masterID}>                
                 {this.props.image}
                 <div style={contentStyle} id={this.props.text}>
                     {this.props.content}
