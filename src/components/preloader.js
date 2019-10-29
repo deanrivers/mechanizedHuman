@@ -14,14 +14,6 @@ import video from '../assets/ex1.mp4'
 
 
 class Loader extends Component {
-    constructor(props){
-        super(props);
-    
-        this.state = {
-            
-        };
-    }
-
 
     render(){
     

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import lottie from 'lottie-web'
+import $ from 'jquery'
 
 
 
@@ -48,7 +49,7 @@ class App extends Component {
 
   newsFeedFetch = () => {
 
-    this.setState({loading:true})
+    this.setState({loading:false})
 
     axios.get("/.netlify/functions/server/fetchFeed")
     .then(response => {
@@ -64,9 +65,24 @@ class App extends Component {
     axios.get("/.netlify/functions/server/fetchTimeline")
     .then(response => {
       this.setState({twitterFeed : response.data})
+      // setTimeout( () => {
+      //   this.setState({ loading: false })
+      // }, 2200)
+
+      //fade out preloader
       setTimeout( () => {
-        this.setState({ loading: false })
-      }, 2200)
+        //fade out pre loader container
+        var target = $('#pre-loader-container')
+        target.fadeOut('slow')
+        //remove element from DOM after fade out
+        setTimeout( () =>{
+          target.remove()
+        },2000) 
+      }, 2000)
+
+      //remove pre-loader from dom
+      
+
 
     })
     .catch(e => {
@@ -90,6 +106,7 @@ class App extends Component {
           <div className="App">
             
             <div id="main">
+              <Loader/>
               <Nav/>
               <div id="grid">
     
