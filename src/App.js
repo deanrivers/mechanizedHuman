@@ -43,6 +43,11 @@ class App extends Component {
   }
 
   componentDidMount = () => {
+    //make html overflow hidden
+    var html = $('html')
+    html.css('overflow','hidden')
+
+    //fetch data
     this.newsFeedFetch()
     this.twitterFeedFetch()
   }
@@ -73,17 +78,15 @@ class App extends Component {
       setTimeout( () => {
         //fade out pre loader container
         var target = $('#pre-loader-container')
-        target.fadeOut('slow')
+        target.fadeOut('fast')
         //remove element from DOM after fade out
         setTimeout( () =>{
           target.remove()
-        },2000) 
-      }, 2000)
-
-      //remove pre-loader from dom
-      
-
-
+          var html = $('html')
+          html.css('overflow','auto')
+        },200) 
+      }, 1000)
+  
     })
     .catch(e => {
       return "ERROR"

@@ -12,7 +12,8 @@ import React, { Component } from 'react';
 let listStyle = {
   maxHeight: '350px',
   overflow: 'scroll',
-  marginTop: '12%'
+  marginTop: '12%',
+  
 }
 
 
@@ -49,7 +50,7 @@ class NewsFeed extends Component {
     return (
       <div id="news-feed-container">
         {/* <img src={newsFeed} id="news-feed-image"></img> */}
-        <ul style={listStyle}>
+        <ul style={listStyle} id="news-list">
           { this.state.feed['items'].map( item  => 
               <li>
                 <a href={item['link']} rel="noopener noreferrer" target="_blank"><p>{item['title']}</p></a>
