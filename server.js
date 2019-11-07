@@ -118,6 +118,7 @@ router.get('/fetchTimeline', async (req, res) => {
 
       let parsedHour = ''
       let parsedSuffix = 'AM'
+      const tweetPicSource = tweet['entities']['media'] != undefined? tweet['entities']['media'][1]['media_url_http'] : ''
 
       if (date.getHours() == 12 || date.getHours() == 0 ) {
         parsedHour = 12
@@ -154,7 +155,8 @@ router.get('/fetchTimeline', async (req, res) => {
       const parsedObject = {
         text: parsedText,
         href,
-        timestamp
+        timestamp,
+        tweetPicSource
       }
 
       parsedTweets.push(parsedObject)
@@ -177,7 +179,12 @@ const fetchRSS = async (url) => {
 router.get('/fetchFeed', async (req, res) => {
   let physFeed = await fetchRSS('https://phys.org/rss-feed/breaking/technology-news/')
   let mitFeed = await fetchRSS('http://news.mit.edu/rss/topic/science-technology-and-society')
-  let feed = { items: [...physFeed['items'], ...mitFeed['items']] }
+
+  let feedItems = [...physFeed['items'], ...mitFeed['items']]
+  const shuffled = feedItems.sort(() => 0.5 - Math.random());
+  const shortenedList = shuffled.slice(0, 20);
+
+  let feed = { items: shortenedList }
 
   res.send(feed);
 });

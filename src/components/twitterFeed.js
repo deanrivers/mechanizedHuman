@@ -47,21 +47,24 @@ class TwitterFeed extends Component {
       <p>{tweet['text'] +'\n'}<a href={tweet['href']} rel="noopener noreferrer" target="_blank" >{tweet['href']}</a>  </p>,
       <br/>,
       <br/>,
-      <i>{tweet['timestamp']}</i>   
+      //<img src={tweet['tweetPicSource'] + '?format=jpg&name=thumb'} />,
+      <i>{tweet['timestamp']}</i>,
       ]
     }else if(tweet['href'] && !tweet['text']){
       return[
         <a href={tweet['href']} rel="noopener noreferrer" target="_blank" >{tweet['href']}</a>,
         <br/>,
         <br/>,
-        <i>{tweet['timestamp']}</i>  
+        //<img src={tweet['tweetPicSource'] + '?format=jpg&name=thumb'} />,
+        <i>{tweet['timestamp']}</i>,
       ]
     }else{
       return[
         <p>{tweet['text']}</p>,
         <br/>,
         <br/>,
-        <i>{tweet['timestamp']}</i>
+        // <img src={tweet['tweetPicSource'] + '?format=jpg&name=thumb'} />,
+        <i>{tweet['timestamp']}</i>,
       ]
     }
   }

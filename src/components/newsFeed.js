@@ -47,6 +47,7 @@ class NewsFeed extends Component {
   }
 
   render() {
+
     return (
       <div id="news-feed-container">
         {/* <img src={newsFeed} id="news-feed-image"></img> */}
