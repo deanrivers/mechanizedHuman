@@ -126,6 +126,8 @@ class App extends Component {
                 </div>
     
                 <div className="main-containers" id="summary"><Content text="Summary" image={<img src={questionMarks} id="question-image" className="svg-headers"/>} content={<Summary/>} padding="0px" float="right" color="#FFFFFF"/></div>
+                <div className="main-containers" id="donate"><Content text="Donate" image={null} content={<Donate/>} padding="0px" float="right" color="#FFFFFF"/></div>
+                
                 <div className="main-containers" id="news-feed"><Content image={<img src={newsFeed} id="news-feed-image" className="svg-headers"/>} content={<NewsFeed feed={this.state.newsFeed}/>}id="countdown-contatiner" text="news-feed-content" padding="0px" float="left"/></div>
                 <div className="iframe-container main-containers" id="videos"><VideoPlayer/></div>
                 {/* <div className="main-container" id="donate"><Content image={<img src={donateImage} id="donate-image" className="svg-headers"/>} content={<Donate/>}/></div> */}
