@@ -84,7 +84,6 @@ class Contact extends Component {
 
 		axios.post("/.netlify/functions/server/sendMail",requestBody)
 		.then( response => {
-			console.log(response)
 			this.setState({
 				name: "",
 				email: "",
