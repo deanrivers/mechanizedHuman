@@ -41,30 +41,30 @@ class TwitterFeed extends Component {
     })
   }
 
-  renderTweet = tweet => {
+  renderTweet = (tweet, index) => {
     if(tweet['href'] && tweet['text']){
       return [
-      <p>{tweet['text'] +'\n'}<a href={tweet['href']} rel="noopener noreferrer" target="_blank" >{tweet['href']}</a>  </p>,
-      <br/>,
-      <br/>,
+      <p key={`p-${index}`} >{tweet['text'] +'\n'}<a href={tweet['href']} rel="noopener noreferrer" target="_blank" >{tweet['href']}</a>  </p>,
+      <br  key={`br1-${index}`} />,
+      <br key={`br2-${index}`} />,
       //<img src={tweet['tweetPicSource'] + '?format=jpg&name=thumb'} />,
-      <i>{tweet['timestamp']}</i>,
+      <i key={`i-${index}`}>{tweet['timestamp']}</i>,
       ]
     }else if(tweet['href'] && !tweet['text']){
       return[
-        <a href={tweet['href']} rel="noopener noreferrer" target="_blank" >{tweet['href']}</a>,
-        <br/>,
-        <br/>,
+        <a key={`a-${index}`}  href={tweet['href']} rel="noopener noreferrer" target="_blank" >{tweet['href']}</a>,
+        <br  key={`br1-${index}`} />,
+        <br key={`br2-${index}`} />,
         //<img src={tweet['tweetPicSource'] + '?format=jpg&name=thumb'} />,
-        <i>{tweet['timestamp']}</i>,
+        <i key={`i-${index}`}>{tweet['timestamp']}</i>,
       ]
     }else{
       return[
-        <p>{tweet['text']}</p>,
-        <br/>,
-        <br/>,
+        <p  key={`p-${index}`} >{tweet['text']}</p>,
+        <br  key={`br1-${index}`} />,
+        <br key={`br2-${index}`} />,
         // <img src={tweet['tweetPicSource'] + '?format=jpg&name=thumb'} />,
-        <i>{tweet['timestamp']}</i>,
+        <i  key={`i-${index}`} >{tweet['timestamp']}</i>,
       ]
     }
   }
@@ -75,8 +75,8 @@ class TwitterFeed extends Component {
           {/* <img src={twitterImage} id="twitter-image"/> */}
           {this.props.image}
           <ul style={listStyle}>
-            { this.state.feed.map( tweet  => 
-                <li className="twitterFeed-item">
+            { this.state.feed.map( (tweet, index)  => 
+                <li className="twitterFeed-item" key={`twitterFeedLink-${index}`}>
                   {this.renderTweet(tweet)}
                 </li>
             )}

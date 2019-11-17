@@ -52,8 +52,8 @@ class NewsFeed extends Component {
       <div id="news-feed-container">
         {/* <img src={newsFeed} id="news-feed-image"></img> */}
         <ul style={listStyle} id="news-list">
-          { this.state.feed['items'].map( item  => 
-              <li>
+          { this.state.feed['items'].map( (item, index ) => 
+              <li key={`newsFeedLink-${index}`} >
                 <a href={item['link']} rel="noopener noreferrer" target="_blank"><p>{item['title']}</p></a>
                 <i>{item['content']}</i>
                 
