@@ -45,7 +45,9 @@ router.post('/sendMail', async (req, res) => {
         "to: ", "mechhummedia@gmail.com", "\n",
         "from: ", "mechhummedia@gmail.com", "\n",
         "subject: ", "New Notification!", "\n\n",
-        "Sender Email: " + req.body.email + "!\nMessage:\n\n" + req.body.message
+        "\nName: " + req.body.name +
+        "\nSender Email: " + req.body.email +
+        "\nMessage:\n\n" + req.body.message
       ].join('');
 
       let base64EncodedEmail = Base64.encodeURI(str);
@@ -64,7 +66,7 @@ router.post('/sendMail', async (req, res) => {
   } catch (error) {
     console.log(error)
   }
-  res.send(200)
+  res.sendStatus(200)
 })
 
 

@@ -11,11 +11,13 @@ class Contact extends Component {
 			charactersRemaining: 160,
 			maxCharacters: 160,
 			charatctersEntered: 0,
+			name: "",
 			email: "",
 			message: "",
 			errorMessage: ""
 		};
 		this.handleSubmit = this.handleSubmit.bind(this)
+		this.updateName = this.updateName.bind(this)
 		this.updateMessage = this.updateMessage.bind(this)
 		this.updateEmail = this.updateEmail.bind(this)
 		this.checkInfo = this.checkInfo.bind(this)
@@ -65,10 +67,17 @@ class Contact extends Component {
 			charactersRemaining: this.state.maxCharacters - textLength 
 		});
 	}
+
+	updateName(event) {
+		this.setState({
+			name: event.target.value
+		});
+	}
 	
 	handleSubmit = () => {
 
 		const requestBody = {
+			"name": this.state.name,
 			"email": this.state.email,
 			"message": this.state.message
 		}
@@ -77,6 +86,7 @@ class Contact extends Component {
 		.then( response => {
 			console.log(response)
 			this.setState({
+				name: "",
 				email: "",
 				message: "",
 			})
@@ -92,15 +102,13 @@ class Contact extends Component {
 				{/* <img src={contactImage} id="contact-image"/> */}
 				{this.props.image}
 				<form id="contact-form">
-					{/* <input id="name-field" className="text-field" type="text" name="firstname" placeholder="Name"></input> */}
 					<p id="error-message">{this.state.errorMessage}</p>
-					<input className="text-field" type="name" name="name" ref="name"placeholder="Name"></input>
-					<input className="text-field" type="email" name="email" ref="email"placeholder="Email" onChange={this.updateEmail} ></input>
+					<input className="text-field" type="name" name="name" ref="name" placeholder="Name" onKeyUp={this.updateName}></input>
+					<input className="text-field" type="email" name="email" ref="email" placeholder="Email" onKeyUp={this.updateEmail} ></input>
 					<textarea id="message-area" className="text-field" onKeyUp={this.updateMessage} ref="message" maxLength="160" type="message" name="message" placeholder="Message..."></textarea>
 					<span id="character-count">You have {this.state.charactersRemaining} characters remaming.</span>
 					<button id="submit-button" onClick={this.checkInfo}>Submit</button>
 				</form>
-				{/* <button id="submit-button" onClick={this.testSubmit}>Test Submit</button> */}
 			</div>
 		);
 	}
