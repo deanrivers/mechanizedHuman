@@ -22,7 +22,8 @@ class Contact extends Component {
 		
 	}
 
-	checkInfo(){
+	checkInfo(e){
+		e.preventDefault()
 		var email = this.refs.email.value
 		var name = this.refs.name.value
 		var message = this.refs.message.value
@@ -44,7 +45,9 @@ class Contact extends Component {
 
 		//if everything is valid do, trigger handle submit
 		if(valid){
-			this.handleSubmit;
+			console.log('everything is valid')
+			this.handleSubmit();
+			this.setState({errorMessage: 'Thank You for contacting us!'})
 		} 
 	}
 
@@ -83,7 +86,6 @@ class Contact extends Component {
 		})
 	}
 
-
 	render() {
 		return (
 			<div id="contact-container">
@@ -97,7 +99,6 @@ class Contact extends Component {
 					<textarea id="message-area" className="text-field" onKeyUp={this.updateMessage} ref="message" maxLength="160" type="message" name="message" placeholder="Message..."></textarea>
 					<span id="character-count">You have {this.state.charactersRemaining} characters remaming.</span>
 					<button id="submit-button" onClick={this.checkInfo}>Submit</button>
-
 				</form>
 				{/* <button id="submit-button" onClick={this.testSubmit}>Test Submit</button> */}
 			</div>
