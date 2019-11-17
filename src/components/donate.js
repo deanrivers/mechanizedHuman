@@ -13,7 +13,7 @@ class Donate extends Component{
     paypalClicked(e){
         //click 
         e.preventDefault()
-        let paypal = document.getElementById('paypal-button')
+        let paypal = document.getElementById('paypal-input')
         paypal.click()
     }
 
@@ -21,6 +21,7 @@ class Donate extends Component{
         return(
             <div id="donate-button-container">
                 <img id="paypal-image" src={payPalImage}/>
+                <button className="btn" id="paypal-button" onClick={this.paypalClicked}>Donate</button>
                 {/* <button id="donate-button">Donate & Help!</button> */}
                 <form id="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                     <input type="hidden" name="cmd" value="_donations" />
@@ -29,7 +30,7 @@ class Donate extends Component{
                     <input type="image" id="paypal-input" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
                     <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
                 </form>
-                <button id="paypal-button" onClick={this.paypalClicked}>something</button>
+                
             </div>
             
         );
