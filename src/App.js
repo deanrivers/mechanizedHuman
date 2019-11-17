@@ -85,8 +85,7 @@ class App extends Component {
           var html = $('html')
           html.css('overflow','auto')
         },200) 
-      }, 1000)
-  
+      }, 1200)
     })
     .catch(e => {
       return "ERROR"
@@ -107,7 +106,6 @@ class App extends Component {
     } else {
         return (
           <div className="App">
-            
             <div id="main">
               <Loader/>
               <Nav/>
@@ -148,8 +146,24 @@ class App extends Component {
                 <div className="main-containers" id="donate2"><Content text="donate" padding="0px" float="right" color="orange"/></div> */}
     
               </div>
+
+              
+
+
                       
             </div>
+
+            <div id="modal">
+              <div className="modal-content">
+                <div className="modal-paragraph">
+                  <p>Test</p>
+                  <button>Something</button>
+                </div>
+
+              </div>
+            </div>
+            
+            
             
           </div>
         );
@@ -158,3 +172,5 @@ class App extends Component {
 }
 
 export default App; 
+
+

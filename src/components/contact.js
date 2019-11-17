@@ -12,14 +12,43 @@ class Contact extends Component {
 			maxCharacters: 160,
 			charatctersEntered: 0,
 			email: "",
-			message: ""
+			message: "",
+			errorMessage: ""
 		};
-		this.handleSubmit = this.handleSubmit.bind(this);
-		this.updateMessage = this.updateMessage.bind(this);
-		this.updateEmail = this.updateEmail.bind(this);
+		this.handleSubmit = this.handleSubmit.bind(this)
+		this.updateMessage = this.updateMessage.bind(this)
+		this.updateEmail = this.updateEmail.bind(this)
+		this.checkInfo = this.checkInfo.bind(this)
+		
 	}
 
-  updateEmail(event) {
+	checkInfo(){
+		var email = this.refs.email.value
+		var name = this.refs.name.value
+		var message = this.refs.message.value
+		var valid = false
+
+		//email regex
+		var emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+		//name regex
+		var nameRegex = /^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/g
+
+		if(emailRegex.test(email) && nameRegex.test(name) && message != '' ){
+			valid = true
+		} else{
+			this.setState({errorMessage: 'Please make sure the info you provided is valid...'})
+		}
+
+		//if something is invalid, provide an error
+
+		//if everything is valid do, trigger handle submit
+		if(valid){
+			this.handleSubmit;
+		} 
+	}
+
+  	updateEmail(event) {
     this.setState({
 			email: event.target.value
 		});
@@ -32,7 +61,6 @@ class Contact extends Component {
 			message: event.target.value,
 			charactersRemaining: this.state.maxCharacters - textLength 
 		});
-
 	}
 	
 	handleSubmit = () => {
@@ -55,6 +83,7 @@ class Contact extends Component {
 		})
 	}
 
+
 	render() {
 		return (
 			<div id="contact-container">
@@ -62,14 +91,15 @@ class Contact extends Component {
 				{this.props.image}
 				<form id="contact-form">
 					{/* <input id="name-field" className="text-field" type="text" name="firstname" placeholder="Name"></input> */}
-
-					<input className="text-field" type="name" name="name" placeholder="Name"></input>
-					<input className="text-field" type="email" name="email" placeholder="Email" onChange={this.updateEmail} ></input>
-					<textarea id="message-area" className="text-field" onKeyUp={this.updateMessage} maxLength="160" type="message" name="message" placeholder="Message..."></textarea>
+					<p id="error-message">{this.state.errorMessage}</p>
+					<input className="text-field" type="name" name="name" ref="name"placeholder="Name"></input>
+					<input className="text-field" type="email" name="email" ref="email"placeholder="Email" onChange={this.updateEmail} ></input>
+					<textarea id="message-area" className="text-field" onKeyUp={this.updateMessage} ref="message" maxLength="160" type="message" name="message" placeholder="Message..."></textarea>
 					<span id="character-count">You have {this.state.charactersRemaining} characters remaming.</span>
-					<button id="submit-button" onClick={this.handleSubmit }>Submit</button>
+					<button id="submit-button" onClick={this.checkInfo}>Submit</button>
 
 				</form>
+				{/* <button id="submit-button" onClick={this.testSubmit}>Test Submit</button> */}
 			</div>
 		);
 	}

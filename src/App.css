@@ -66,7 +66,7 @@ background: grey;
 #countdown-image{
   height: 32%;
   position: absolute;
-  transform: translate(30%,-70%)
+  transform: translate(45%,-70%)
 }
 
 #countdown-container{
@@ -605,6 +605,49 @@ input:-webkit-autofill:focus {
   background-attachment: local,scroll; */
 }
 
+#error-message{
+  color: red;
+}
+
+#modal{
+  background: rgba(0,0,0,0.7);
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  animation-name: modalPopIn;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-in-out;
+}
+
+.modal-content{
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 20px 50px 5px #272727;
+  border-radius: 10px;
+  color: #01a9f3;
+  text-align: center;
+  opacity: 1;    
+  animation-name: modalContentPopIn;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  transform: translateY(0px);
+}
+
+.modal-paragraph button{
+  margin-top: 5%;
+}
+
 
 /* apply display flex */
 @media only screen and (max-width: 800px) {
@@ -770,4 +813,64 @@ input:-webkit-autofill:focus {
     border-top: 5px solid #ccc;
    
   }
+}
+
+@media screen and (max-width: 500px){
+  #form-container{
+      max-width: 300px;
+  }
+}
+
+
+
+/* animations */
+
+/* modal animations */
+/* Chrome */
+@keyframes modalPopIn {
+  from {background: rgba(0,0,0,0.0);}
+  to {background: rgba(0,0,0,0.7);}
+}
+@keyframes modalContentPopIn {
+  0% {
+     transform: translateY(-400px);
+  }
+  70%{
+      opacity: 1;
+      transform: translateY(50px);
+  }
+  100% {        
+      transform: translateY(0px);
+  }
+}
+
+/* required text */
+@keyframes fadeInRequired{
+  from{color: rgba(255,0,0,0);}
+  to{color: rgba(255,0,0,1);}
+}
+
+/* IE Edge */
+@-webkit-keyframes modalPopIn {
+  from {background: rgba(0,0,0,0.0);}
+  to {background: rgba(0,0,0,0.7);}
+}
+@-webkit-keyframes modalContentPopIn {
+  0% {
+     /* opacity: 0;  */
+     transform: translateY(-400px);
+  }
+  70%{
+      opacity: 1;
+      transform: translateY(50px);
+  }
+
+  100% {        
+      transform: translateY(0px);
+  }
+}
+
+@-webkit-keyframes fadeInRequired{
+  from{color: rgba(255,0,0,0);}
+  to{color: rgba(255,0,0,1);}
 }
