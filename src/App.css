@@ -114,13 +114,12 @@ background: grey;
 /* grid-column: 2/4; */
 /* height: 500px */
 /* background-image: linear-gradient(to bottom right, rgb(241, 241, 241),rgb(199, 199, 199)); */
-
 }
 
 
 
 #news-feed{
-  background: #ffd5c6;
+  background: #f9f9f9;
   /* width: 300px; */
   /* height: 80%; */
   grid-column: 1/2;
@@ -215,6 +214,11 @@ background: grey;
   /* height: 500px; */
   /* grid-row: 3/5; */
   
+  
+}
+
+#Twitter{
+  border-radius: 5px;
 }
 #donate-container{
   background: white;
