@@ -47,10 +47,6 @@ class Contact extends Component {
 		if(valid){
 			console.log('everything is valid')
 			this.handleSubmit();
-			document.getElementById("contact-form").reset();
-			this.setState({
-				charactersRemaining: 160,
-				errorMessage: 'Thank You for contacting us!'})
 		} 
 	}
 
@@ -85,10 +81,13 @@ class Contact extends Component {
 
 		axios.post("/.netlify/functions/server/sendMail",requestBody)
 		.then( () => {
+			document.getElementById("contact-form").reset();
 			this.setState({
 				name: "",
 				email: "",
 				message: "",
+				charactersRemaining: 160,
+				errorMessage: 'Thank You for contacting us!',
 			})
 		})
 		.catch( error => {
