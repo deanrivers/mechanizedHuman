@@ -1,6 +1,7 @@
 
 import axios from 'axios'
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import moment from 'moment/src/moment'
 // import PropTypes from 'prop-types'
 
 //images
@@ -56,7 +57,9 @@ class NewsFeed extends Component {
               <li key={`newsFeedLink-${index}`} >
                 <a href={item['link']} rel="noopener noreferrer" target="_blank"><p>{item['title']}</p></a>
                 <i>{item['content']}</i>
-                
+                <br/>
+                <br/>
+                <i>{moment(item['pubDate']).utc().format('MMMM Do YYYY')}</i>
               </li>
               
                        

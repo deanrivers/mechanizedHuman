@@ -12,6 +12,7 @@
     "jquery": "^3.4.1",
     "js-base64": "^2.5.1",
     "lottie-web": "^5.5.9",
+    "moment": "^2.24.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-lottie": "^1.2.3",
