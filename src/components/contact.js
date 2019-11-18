@@ -10,7 +10,6 @@ class Contact extends Component {
 		this.state = {
 			charactersRemaining: 160,
 			maxCharacters: 160,
-			charatctersEntered: 0,
 			name: "",
 			email: "",
 			message: "",
@@ -44,12 +43,14 @@ class Contact extends Component {
 		}
 
 		//if something is invalid, provide an error
-
 		//if everything is valid do, trigger handle submit
 		if(valid){
 			console.log('everything is valid')
 			this.handleSubmit();
-			this.setState({errorMessage: 'Thank You for contacting us!'})
+			document.getElementById("contact-form").reset();
+			this.setState({
+				charactersRemaining: 160,
+				errorMessage: 'Thank You for contacting us!'})
 		} 
 	}
 
@@ -105,7 +106,7 @@ class Contact extends Component {
 					<input className="text-field" type="name" name="name" ref="name" placeholder="Name" onKeyUp={this.updateName}></input>
 					<input className="text-field" type="email" name="email" ref="email" placeholder="Email" onKeyUp={this.updateEmail} ></input>
 					<textarea id="message-area" className="text-field" onKeyUp={this.updateMessage} ref="message" maxLength="160" type="message" name="message" placeholder="Message..."></textarea>
-					<span id="character-count">You have {this.state.charactersRemaining} characters remaming.</span>
+					<span id="character-count">You have {this.state.charactersRemaining} characters remaining.</span>
 					<button id="submit-button" onClick={this.checkInfo}>Submit</button>
 				</form>
 			</div>
