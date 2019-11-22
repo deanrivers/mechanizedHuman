@@ -15,7 +15,13 @@ const gmailClientSecret = process.env.REACT_APP_GMAIL_CONSUMER_SECRET
 const gmailRefreshToken = process.env.REACT_APP_GMAIL_REFRESH_TOKEN
 
 const Parser = require('rss-parser');
-const parser = new Parser();
+const parser = new Parser({
+  customFields: {
+    item: [
+      ['media:thumbnail', 'media'],
+      ['media:content', 'media'],
+  ]},
+});
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
