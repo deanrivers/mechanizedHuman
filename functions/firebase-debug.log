@@ -1,0 +1,130 @@
+[debug] [2019-11-23T20:19:18.226Z] ----------------------------------------------------------------------
+[debug] [2019-11-23T20:19:18.228Z] Command:       /usr/local/Cellar/node/11.10.0/bin/node /usr/local/bin/firebase serve
+[debug] [2019-11-23T20:19:18.229Z] CLI Version:   7.8.1
+[debug] [2019-11-23T20:19:18.229Z] Platform:      darwin
+[debug] [2019-11-23T20:19:18.229Z] Node Version:  v11.10.0
+[debug] [2019-11-23T20:19:18.230Z] Time:          Sat Nov 23 2019 15:19:18 GMT-0500 (Eastern Standard Time)
+[debug] [2019-11-23T20:19:18.230Z] ----------------------------------------------------------------------
+[debug] [2019-11-23T20:19:18.230Z] 
+[debug] [2019-11-23T20:19:18.244Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-11-23T20:19:18.245Z] > authorizing via signed-in user
+[debug] [2019-11-23T20:19:18.245Z] [iam] checking project mechanized-human-1562368485290 for permissions ["firebase.projects.get"]
+[debug] [2019-11-23T20:19:18.247Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/mechanized-human-1562368485290:testIamPermissions  
+
+[debug] [2019-11-23T20:19:18.511Z] <<< HTTP RESPONSE 200
+[debug] [2019-11-23T20:19:18.515Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/mechanized-human-1562368485290  
+ 
+[debug] [2019-11-23T20:19:18.853Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/josecaicedo/git/mechanizedHuman'...
+[info] 
+[debug] [2019-11-23T20:19:18.859Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/mechanized-human-1562368485290/webApps/-/config  
+ 
+[warn] ⚠  Your requested "node" version "8" doesn't match your global version "11"
+[info] ✔  functions: Emulator started at http://localhost:5001
+[debug] [2019-11-23T20:19:19.364Z] <<< HTTP RESPONSE 200
+[info] i  functions: Watching "/Users/josecaicedo/git/mechanizedHuman/functions" for Cloud Functions...
+[debug] [2019-11-23T20:19:19.411Z] [worker-~diagnostic~-6633c9aa-bae2-4662-a597-eae771063a47]: Assigning socketPath: /var/folders/37/c39nxnxn0s95n1htrlgf4h7h0000gn/T/fire_emu_30272.sock
+[debug] [2019-11-23T20:19:19.412Z] [worker-~diagnostic~-6633c9aa-bae2-4662-a597-eae771063a47]: BUSY
+[info] i  hosting: Serving hosting files from: dist
+[info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2019-11-23T20:19:20.322Z] [runtime-status] [30272] Functions runtime initialized. {"cwd":"/Users/josecaicedo/git/mechanizedHuman/functions","node_version":"11.10.0"}
+[debug] [2019-11-23T20:19:20.325Z] [runtime-status] [30272] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-11-23T20:19:20.328Z] [runtime-status] [30272] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.8.0","resolution":"/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-23T20:19:20.329Z] [runtime-status] [30272] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-23T20:19:20.330Z] [runtime-status] [30272] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/firebase-functions/lib/index.js"}
+[info] ✔  functions[api]: http function initialized (http://localhost:5001/mechanized-human-1562368485290/us-central1/api).
+[debug] [2019-11-23T20:19:21.091Z] [worker-~diagnostic~-6633c9aa-bae2-4662-a597-eae771063a47]: exited
+[debug] [2019-11-23T20:19:21.092Z] [worker-~diagnostic~-6633c9aa-bae2-4662-a597-eae771063a47]: FINISHED
+[debug] [2019-11-23T20:19:26.189Z] Accepted request GET /mechanized-human-1562368485290/us-central1/api --> api
+[debug] [2019-11-23T20:19:26.197Z] [worker-api-2c4041b9-bd22-4239-a328-40c117dc0bd8]: Assigning socketPath: /var/folders/37/c39nxnxn0s95n1htrlgf4h7h0000gn/T/fire_emu_30278.sock
+[debug] [2019-11-23T20:19:26.197Z] [worker-api-2c4041b9-bd22-4239-a328-40c117dc0bd8]: BUSY
+[debug] [2019-11-23T20:19:26.587Z] [runtime-status] [30278] Functions runtime initialized. {"cwd":"/Users/josecaicedo/git/mechanizedHuman/functions","node_version":"11.10.0"}
+[debug] [2019-11-23T20:19:26.590Z] [runtime-status] [30278] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-11-23T20:19:26.593Z] [runtime-status] [30278] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.8.0","resolution":"/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-23T20:19:26.594Z] [runtime-status] [30278] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-23T20:19:26.595Z] [runtime-status] [30278] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-23T20:19:27.307Z] [runtime-status] [30278] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-23T20:19:27.308Z] [runtime-status] [30278] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-23T20:19:27.308Z] [runtime-status] [30278] Running api in mode HTTPS
+[debug] [2019-11-23T20:19:27.316Z] [runtime-status] [30278] Attempting to listen to socketPath: /var/folders/37/c39nxnxn0s95n1htrlgf4h7h0000gn/T/fire_emu_30278.sock
+[debug] [2019-11-23T20:19:27.322Z] [functions] Runtime ready! Sending request!
+[debug] [2019-11-23T20:19:27.338Z] [runtime-status] [30278] Ephemeral server handling GET request
+[debug] [2019-11-23T20:19:27.350Z] [runtime-status] [30278] Ephemeral server survived.
+[info] >  Error: Not allowed by CORS
+[info] >      at origin (/Users/josecaicedo/git/mechanizedHuman/functions/index.js:35:23)
+[info] >      at /Users/josecaicedo/git/mechanizedHuman/functions/node_modules/cors/lib/index.js:219:13
+[info] >      at optionsCallback (/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/cors/lib/index.js:199:9)
+[info] >      at corsMiddleware (/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/cors/lib/index.js:204:7)
+[info] >      at Layer.handle [as handle_request] (/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/express/lib/router/layer.js:95:5)
+[info] >      at trim_prefix (/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/express/lib/router/index.js:317:13)
+[info] >      at /Users/josecaicedo/git/mechanizedHuman/functions/node_modules/express/lib/router/index.js:284:7
+[info] >      at Function.process_params (/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/express/lib/router/index.js:335:12)
+[info] >      at next (/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/express/lib/router/index.js:275:10)
+[info] >      at expressInit (/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/express/lib/middleware/init.js:40:5)
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-23T20:19:27.355Z] [worker-api-2c4041b9-bd22-4239-a328-40c117dc0bd8]: IDLE
+[debug] [2019-11-23T20:19:34.750Z] Accepted request GET /mechanized-human-1562368485290/us-central1/api --> api
+[debug] [2019-11-23T20:19:34.750Z] [worker-api-2c4041b9-bd22-4239-a328-40c117dc0bd8]: Assigning socketPath: /var/folders/37/c39nxnxn0s95n1htrlgf4h7h0000gn/T/fire_emu_30278.sock
+[debug] [2019-11-23T20:19:34.750Z] [worker-api-2c4041b9-bd22-4239-a328-40c117dc0bd8]: BUSY
+[debug] [2019-11-23T20:19:34.752Z] [runtime-status] [30278] Trigger "api" has been found, beginning invocation!
+[info] i  functions: Beginning execution of "api"
+[debug] [2019-11-23T20:19:34.752Z] [runtime-status] [30278] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"}
+[debug] [2019-11-23T20:19:34.752Z] [runtime-status] [30278] Running api in mode HTTPS
+[debug] [2019-11-23T20:19:34.753Z] [runtime-status] [30278] Attempting to listen to socketPath: /var/folders/37/c39nxnxn0s95n1htrlgf4h7h0000gn/T/fire_emu_30278.sock
+[debug] [2019-11-23T20:19:34.754Z] [functions] Runtime ready! Sending request!
+[debug] [2019-11-23T20:19:34.756Z] [runtime-status] [30278] Ephemeral server handling GET request
+[debug] [2019-11-23T20:19:34.759Z] [runtime-status] [30278] Ephemeral server survived.
+[info] >  Error: Not allowed by CORS
+[info] >      at origin (/Users/josecaicedo/git/mechanizedHuman/functions/index.js:35:23)
+[info] >      at /Users/josecaicedo/git/mechanizedHuman/functions/node_modules/cors/lib/index.js:219:13
+[info] >      at optionsCallback (/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/cors/lib/index.js:199:9)
+[info] >      at corsMiddleware (/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/cors/lib/index.js:204:7)
+[info] >      at Layer.handle [as handle_request] (/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/express/lib/router/layer.js:95:5)
+[info] >      at trim_prefix (/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/express/lib/router/index.js:317:13)
+[info] >      at /Users/josecaicedo/git/mechanizedHuman/functions/node_modules/express/lib/router/index.js:284:7
+[info] >      at Function.process_params (/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/express/lib/router/index.js:335:12)
+[info] >      at next (/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/express/lib/router/index.js:275:10)
+[info] >      at expressInit (/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/express/lib/middleware/init.js:40:5)
+[info] i  functions: Finished "api" in ~1s
+[debug] [2019-11-23T20:19:34.762Z] [worker-api-2c4041b9-bd22-4239-a328-40c117dc0bd8]: IDLE
+[debug] [2019-11-23T20:19:44.219Z] File /Users/josecaicedo/git/mechanizedHuman/functions/index.js changed, reloading triggers
+[debug] [2019-11-23T20:19:45.220Z] [worker-pool]: Shutting down IDLE worker (api)
+[debug] [2019-11-23T20:19:45.240Z] [worker-~diagnostic~-3f10eedd-0725-4a95-9d17-e981cca58571]: Assigning socketPath: /var/folders/37/c39nxnxn0s95n1htrlgf4h7h0000gn/T/fire_emu_30286.sock
+[debug] [2019-11-23T20:19:45.240Z] [worker-~diagnostic~-3f10eedd-0725-4a95-9d17-e981cca58571]: BUSY
+[debug] [2019-11-23T20:19:45.241Z] [worker-api-2c4041b9-bd22-4239-a328-40c117dc0bd8]: exited
+[debug] [2019-11-23T20:19:45.241Z] [worker-api-2c4041b9-bd22-4239-a328-40c117dc0bd8]: FINISHED
+[debug] [2019-11-23T20:19:46.283Z] [runtime-status] [30286] Functions runtime initialized. {"cwd":"/Users/josecaicedo/git/mechanizedHuman/functions","node_version":"11.10.0"}
+[debug] [2019-11-23T20:19:46.287Z] [runtime-status] [30286] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-11-23T20:19:46.292Z] [runtime-status] [30286] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.8.0","resolution":"/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-23T20:19:46.293Z] [runtime-status] [30286] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-23T20:19:46.294Z] [runtime-status] [30286] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-23T20:19:46.717Z] File /Users/josecaicedo/git/mechanizedHuman/functions/index.js changed, reloading triggers
+[debug] [2019-11-23T20:19:47.453Z] File /Users/josecaicedo/git/mechanizedHuman/functions/index.js changed, reloading triggers
+[debug] [2019-11-23T20:19:47.554Z] File /Users/josecaicedo/git/mechanizedHuman/functions/index.js changed, reloading triggers
+[debug] [2019-11-23T20:19:48.557Z] [worker-pool]: Marking BUSY worker to finish (~diagnostic~)
+[debug] [2019-11-23T20:19:48.557Z] [worker-~diagnostic~-3f10eedd-0725-4a95-9d17-e981cca58571]: FINISHING
+[debug] [2019-11-23T20:19:48.575Z] [worker-~diagnostic~-c3b1b0c2-e985-496c-b36f-3694d58dd9f7]: Assigning socketPath: /var/folders/37/c39nxnxn0s95n1htrlgf4h7h0000gn/T/fire_emu_30295.sock
+[debug] [2019-11-23T20:19:48.576Z] [worker-~diagnostic~-c3b1b0c2-e985-496c-b36f-3694d58dd9f7]: BUSY
+[warn] ⚠  TypeError: Cannot read property 'origin' of undefined
+    at /Users/josecaicedo/git/mechanizedHuman/functions/node_modules/cors/lib/index.js:219:40
+    at optionsCallback (/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/cors/lib/index.js:199:9)
+    at corsMiddleware (/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/cors/lib/index.js:204:7)
+    at Object.<anonymous> (/Users/josecaicedo/git/mechanizedHuman/functions/index.js:40:9)
+    at Module._compile (internal/modules/cjs/loader.js:738:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:749:10)
+    at Module.load (internal/modules/cjs/loader.js:630:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:570:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:3)
+    at Module.require (internal/modules/cjs/loader.js:667:17)
+[warn] ⚠  We were unable to load your functions code. (see above)
+[debug] [2019-11-23T20:19:49.277Z] [worker-~diagnostic~-3f10eedd-0725-4a95-9d17-e981cca58571]: exited
+[debug] [2019-11-23T20:19:49.278Z] [worker-~diagnostic~-3f10eedd-0725-4a95-9d17-e981cca58571]: FINISHED
+[debug] [2019-11-23T20:19:49.743Z] [runtime-status] [30295] Functions runtime initialized. {"cwd":"/Users/josecaicedo/git/mechanizedHuman/functions","node_version":"11.10.0"}
+[debug] [2019-11-23T20:19:49.747Z] [runtime-status] [30295] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2019-11-23T20:19:49.749Z] [runtime-status] [30295] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.8.0","resolution":"/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/firebase-admin/lib/index.js"}
+[debug] [2019-11-23T20:19:49.753Z] [runtime-status] [30295] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-23T20:19:49.754Z] [runtime-status] [30295] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"/Users/josecaicedo/git/mechanizedHuman/functions/node_modules/firebase-functions/lib/index.js"}
+[debug] [2019-11-23T20:19:52.994Z] [worker-~diagnostic~-c3b1b0c2-e985-496c-b36f-3694d58dd9f7]: exited
+[debug] [2019-11-23T20:19:52.994Z] [worker-~diagnostic~-c3b1b0c2-e985-496c-b36f-3694d58dd9f7]: FINISHED

@@ -1,6 +1,7 @@
 
 import axios from 'axios';
 import React, { Component } from 'react';
+import { TWITTER_ENDPOINT } from '../properties';
 
 // import PropTypes from 'prop-types';
 
@@ -32,7 +33,7 @@ class TwitterFeed extends Component {
 
   twitterFeedFetch = () => {
 
-    axios.get("/.netlify/functions/server/fetchTimeline")
+    axios.get(TWITTER_ENDPOINT)
     .then(response => {
       this.setState({feed : response.data})
     })

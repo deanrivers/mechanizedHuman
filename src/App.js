@@ -3,8 +3,6 @@ import axios from 'axios'
 import lottie from 'lottie-web'
 import $ from 'jquery'
 
-
-
 import Content from './containers/content'
 import VideoPlayer from './components/videoPlayer'
 import Loader from './components/preloader'
@@ -27,7 +25,7 @@ import twitterImage from './assets/svg/twitter.svg'
 import countdownImage from './assets/svg/countdown.svg'
 import questionMarks from './assets/svg/question-marks.svg'
 import donateImage from './assets/svg/donate.svg'
-
+import { TWITTER_ENDPOINT, NEWSFEED_ENDPOINT } from './properties';
 
 class App extends Component {
 
@@ -53,10 +51,7 @@ class App extends Component {
   }
 
   newsFeedFetch = () => {
-
-    this.setState({loading:false})
-
-    axios.get("/.netlify/functions/server/fetchFeed")
+    axios.get(NEWSFEED_ENDPOINT)
     .then(response => {
       this.setState({newsFeed : response.data})
     })
@@ -67,12 +62,9 @@ class App extends Component {
 
   twitterFeedFetch = () => {
 
-    axios.get("/.netlify/functions/server/fetchTimeline")
+    axios.get(TWITTER_ENDPOINT)
     .then(response => {
-      this.setState({twitterFeed : response.data})
-      // setTimeout( () => {
-      //   this.setState({ loading: false })
-      // }, 2200)
+      this.setState({twitterFeed : response.data })
 
       //fade out preloader
       setTimeout( () => {

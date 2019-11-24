@@ -2,6 +2,7 @@
 import axios from 'axios'
 import React, { Component } from 'react'
 import moment from 'moment/src/moment'
+import { NEWSFEED_ENDPOINT } from '../properties'
 // import PropTypes from 'prop-types'
 
 //images
@@ -32,7 +33,7 @@ class NewsFeed extends Component {
 
   newFeedFetch = () => {
 
-    axios.get("/.netlify/functions/server/fetchFeed")
+    axios.get(NEWSFEED_ENDPOINT)
     .then(response => {
       console.log(response.data['items'])
       this.setState({feed : response.data})

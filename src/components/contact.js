@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { GMAIL_ENDPOINT } from '../properties';
 
 //image
 import contactImage from '../assets/contact.png'
@@ -79,7 +80,7 @@ class Contact extends Component {
 			"message": this.state.message
 		}
 
-		axios.post("/.netlify/functions/server/sendMail",requestBody)
+		axios.post(GMAIL_ENDPOINT, requestBody)
 		.then( () => {
 			document.getElementById("contact-form").reset();
 			this.setState({
