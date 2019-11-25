@@ -48,7 +48,7 @@ class TwitterFeed extends Component {
       <br  key={`br1-${index}`} />,
       <br key={`br2-${index}`} />,
       //<img src={tweet['tweetPicSource'] + '?format=jpg&name=thumb'} />,
-      <i key={`i-${index}`}>{tweet['timestamp']}</i>,
+      <i className="timestamp" key={`i-${index}`}>{tweet['timestamp']}</i>,
       ]
     }else if(tweet['href'] && !tweet['text']){
       return[
@@ -56,7 +56,7 @@ class TwitterFeed extends Component {
         <br  key={`br1-${index}`} />,
         <br key={`br2-${index}`} />,
         //<img src={tweet['tweetPicSource'] + '?format=jpg&name=thumb'} />,
-        <i key={`i-${index}`}>{tweet['timestamp']}</i>,
+        <i className="timestamp" key={`i-${index}`}>{tweet['timestamp']}</i>,
       ]
     }else{
       return[
@@ -64,7 +64,7 @@ class TwitterFeed extends Component {
         <br  key={`br1-${index}`} />,
         <br key={`br2-${index}`} />,
         // <img src={tweet['tweetPicSource'] + '?format=jpg&name=thumb'} />,
-        <i  key={`i-${index}`} >{tweet['timestamp']}</i>,
+        <i  className="timestamp" key={`i-${index}`} >{tweet['timestamp']}</i>,
       ]
     }
   }

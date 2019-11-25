@@ -498,7 +498,7 @@ background: grey;
 #question-image{
   position: absolute;
   height: 20%;
-  transform: translate(400%, -30%);
+  transform: translate(440%, -30%);
 }
 
 #header{
@@ -700,6 +700,10 @@ input:-webkit-autofill:focus {
   display: none;
 }
 
+.timestamp{
+  color: rgb(157, 157, 157);
+}
+
 
 /* apply display flex */
 @media only screen and (max-width: 800px) {
@@ -761,6 +765,8 @@ input:-webkit-autofill:focus {
     height: 6%;
     transform: translate(-10%, -50%);
   }
+
+
   #videos{
     /* min-height: 300px; */
   }

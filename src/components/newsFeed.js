@@ -54,7 +54,7 @@ class NewsFeed extends Component {
                 <i>{item['content']}</i>
                 <br/>
                 <br/>
-                <i>{moment(item['pubDate']).utc().format('MMMM Do YYYY')}</i>
+                <i className="timestamp">{moment(item['pubDate']).utc().format('MMMM Do YYYY')}</i>
                 <p>{item['$']}</p>
               </li>   
           )}
