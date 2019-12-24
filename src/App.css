@@ -321,6 +321,8 @@ font-weight: bold;
   grid-column: 3;
   margin-top: 0;
   box-shadow: none;
+  height: 100%;
+  
 }
 
 #paypal-image{
@@ -333,7 +335,7 @@ font-weight: bold;
   width: 50%;
   height: 45px;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 30px;
   border: none;
   outline: none;
   margin: 0 auto;
@@ -341,6 +343,7 @@ font-weight: bold;
   cursor: pointer;  
   background-image: linear-gradient(to right, #2890c3, #27356a);
   transition: 1s;
+  font-weight: bold;
 }
 
 
@@ -388,6 +391,7 @@ font-weight: bold;
   font-size: 15px;
   min-height: 60px;
   margin-right: 0;
+  font-weight: bold;
 
 }
 
@@ -402,7 +406,7 @@ font-weight: bold;
   /* background: rgb(255, 173, 173); */
   margin: 10px;
   border-radius: 5px;
-  box-shadow: 2px 3px 3px 0px #b7b7b7;
+  /* box-shadow: 2px 3px 3px 0px #b7b7b7; */
   position: relative;
   margin-top: 40px;
   /* background: white !important; */
@@ -509,7 +513,7 @@ font-weight: bold;
 #question-image{
   position: absolute;
   height: 20%;
-  transform: translate(400%, -30%);
+  transform: translate(370%, -30%);
 }
 
 #header{
