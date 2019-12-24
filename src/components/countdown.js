@@ -89,6 +89,7 @@ class Countdown extends Component {
 
     return (
       <div id="countdown-parent-container">
+        <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet"></link>
         {/* <img src={coundownImage} id="countdown-image"/> */}
         
 
@@ -99,14 +100,14 @@ class Countdown extends Component {
             <span className="Countdown-col-element">
               <span><span className="countdown-number">{this.addLeadingZeros(countDown.days)}</span></span>
                 
-                <span className="countdown-words">{countDown.days === 1 ? 'Day' : 'Days'}</span>
+                <span className="countdown-words">{countDown.days === 1 ? 'DAY' : 'DAYS'}</span>
             </span>
           </span>
 
           <span className="Countdown-col">
             <span className="Countdown-col-element">
               <span className="countdown-number">{this.addLeadingZeros(countDown.hours)}</span>
-              <span className="countdown-words">Hours</span>
+              <span className="countdown-words">HOURS</span>
             </span>
           </span>
 
@@ -114,14 +115,14 @@ class Countdown extends Component {
           <span className="Countdown-col">
             <span className="Countdown-col-element">
               <span className="countdown-number">{this.addLeadingZeros(countDown.min)}</span>
-              <span className="countdown-words">Min</span>
+              <span className="countdown-words">MINS</span>
             </span>
           </span>
 
           <span className="Countdown-col">
             <span className="Countdown-col-element">
               <span className="countdown-number">{this.addLeadingZeros(countDown.sec)}</span>
-              <span className="countdown-words">Sec</span>
+              <span className="countdown-words">SECS</span>
             </span>
           </span>
         </div>

@@ -46,8 +46,20 @@ class App extends Component {
     html.css('overflow','hidden')
 
     //fetch data
-    this.newsFeedFetch()
-    this.twitterFeedFetch()
+    //this.newsFeedFetch()
+    //this.twitterFeedFetch()
+    setTimeout( () => {
+      //fade out pre loader container
+      var target = $('#pre-loader-container')
+      target.fadeOut('fast')
+      //remove element from DOM after fade out
+      setTimeout( () =>{
+        target.remove()
+        var html = $('html')
+        html.css('overflow','auto')
+      },200) 
+    }, 1800)
+    
   }
 
   newsFeedFetch = () => {
@@ -103,10 +115,10 @@ class App extends Component {
               <Nav/>
               <div id="grid">
     
-                <div className="main-containers" id="headline">
+                {/* <div className="main-containers" id="headline">
                   
                   <Headline/>
-                </div>
+                </div> */}
     
                 <div className="main-containers" id="countdown">
                   <Content text="Countdown" 
@@ -119,7 +131,7 @@ class App extends Component {
                 <div className="main-containers" id="donate"><Content text="Donate" image={null} content={<Donate/>} padding="0px" float="right" color="#FFFFFF"/></div>
                 
                 <div className="main-containers" id="news-feed"><Content image={<img src={newsFeed} id="news-feed-image" className="svg-headers"/>} content={<NewsFeed feed={this.state.newsFeed}/>}id="countdown-contatiner" text="news-feed-content" padding="0px" float="left"/></div>
-                <div className="iframe-container main-containers" id="videos"><VideoPlayer/></div>
+                {/* <div className="iframe-container main-containers" id="videos"><VideoPlayer/></div> */}
                 {/* <div className="main-container" id="donate"><Content image={<img src={donateImage} id="donate-image" className="svg-headers"/>} content={<Donate/>}/></div> */}
 
 

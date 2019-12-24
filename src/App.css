@@ -11,14 +11,23 @@ html,body{
   /* font-family: 'Titillium Web', sans-serif; */
 }
 /* Added */
-#grid{
+/* #grid{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin: 0 auto;
   padding-top: 10%;
   max-width: 80%;
   padding-bottom: 5%;
-  /* grid-row-gap: 20px; */
+  
+} */
+
+#grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 auto;
+  max-width: 70%;
+  padding-top: 8%;
+  padding-bottom: 5%;
 }
 
 .content-container{
@@ -55,8 +64,10 @@ html,body{
 grid-column: 3;
 grid-row: 1/2;
 color: white;
-background-image: linear-gradient(to bottom right, white,#475c7a);
-background: grey;
+/* background-image: linear-gradient(to bottom right, white,#475c7a); */
+background: #081c25;
+border-radius: 0;
+font-weight: bold;
 }
 
 #countdown-parent-container{
@@ -64,9 +75,10 @@ background: grey;
 }
 
 #countdown-image{
-  height: 32%;
+  height: 34%;
   position: absolute;
-  transform: translate(45%,-70%)
+  transform: translate(45%,-70%);
+  display: none;
 }
 
 #countdown-container{
@@ -87,13 +99,18 @@ background: grey;
 }
 
 .countdown-words{
-  font-size: 20px;
+  font-size: 14px;
   font-family: 'Century Gothic';
-  font-weight: light;
+  /* font-weight: light; */
+  text-align: center;
+  text-shadow: 0px 0px 10px;
+  font-family: 'Orbitron', sans-serif;
 }
 .countdown-number{
   /* font-weight: bold; */
-  font-size: 30px;
+  font-size: 25px;
+  text-shadow: 0px 0px 10px;
+  font-family: 'Orbitron', sans-serif;
 }
 
 
@@ -104,6 +121,9 @@ background: grey;
     justify-content: center;
     padding: 15px 15px 15px 15px;
 }
+.Countdown-col{
+  text-align: center;
+} 
 
 #summary{
   background: #F4F4F4;
@@ -116,14 +136,12 @@ background: grey;
 /* background-image: linear-gradient(to bottom right, rgb(241, 241, 241),rgb(199, 199, 199)); */
 }
 
-
-
 #news-feed{
   background: #f9f9f9;
   /* width: 300px; */
   /* height: 80%; */
-  grid-column: 1/2;
-  grid-row: 4/5;
+  grid-column: 1/3;
+  grid-row: 1/4;
   
 }
 
@@ -689,6 +707,7 @@ input:-webkit-autofill:focus {
   margin-top: 5%;
 }
 
+
 #paypal-form{
   display: none;
 }
@@ -751,12 +770,10 @@ input:-webkit-autofill:focus {
     overflow-y: auto; */
   }
   #news-feed-image{
-    height: 6%;
-    transform: translate(-10%, -50%);
+    height: 9%;
+    transform: translate(-7%, -50%);
   }
-  #videos{
-    /* min-height: 300px; */
-  }
+ 
   #twitter{
     min-height: 400px;
   }
@@ -790,11 +807,12 @@ input:-webkit-autofill:focus {
 
   #countdown-image{
     transform: translate(35%,-70%);
+  
   }
 
   #twitter-image{
-    height: 7%;
-    transform: translate(105%, -50%);
+    height: 9%;
+    transform: translate(-10%, -50%);
   }
   #contact-image{
     transform: translate(-15%, -50%);
