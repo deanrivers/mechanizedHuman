@@ -429,7 +429,7 @@ font-weight: bold;
 }
 #nav-flex{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   width: 100vw;
   margin: 0 auto;
   height: 100%;
@@ -638,6 +638,14 @@ input:-webkit-autofill:focus {
 #logo-words-container{
   text-align: center;
   padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+#logo-words-image-mini{
+  
+  height: 100%;
+  width: 100%;
 }
 
 #headline-words{
@@ -825,6 +833,79 @@ input:-webkit-autofill:focus {
 }
 
 
+.whole-logo-hide{
+  
+  /* transition: 0.35s; */
+
+  -webkit-animation: whole-logo-hide 2.5s linear; /* Safari 4.0 - 8.0 */
+  animation: whole-logo-hide 0.2s ease-in-out;
+  animation-timing-function: ease-in-out;
+  /* display: none; */
+  /* transform: translateX(100%); */
+  opacity: 0;
+}
+.whole-logo-reveal{
+  -webkit-animation: whole-logo-reveal 2.5s linear; /* Safari 4.0 - 8.0 */
+  animation: whole-logo-reveal 0.2s ease-in-out;
+  animation-timing-function: ease-in-out;
+  /* display: none; */
+}
+
+.solo-logo-reveal{
+  display: block !important;
+  /* opacity: 0; */
+  /* transform: translateX(-160%); */
+  
+  
+  -webkit-animation: solo-logo-reveal 2.5s linear; /* Safari 4.0 - 8.0 */
+  animation: solo-logo-reveal 0.2s ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.solo-logo-hide{
+  opacity: 0;
+  -webkit-animation: solo-logo-hide 2.5s linear; /* Safari 4.0 - 8.0 */
+  animation: solo-logo-hide 0.2s ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+#logos-container{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+}
+
+#whole-logo-container{
+  
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#solo-logo-container{
+  display: none;
+  /* opacity: 0; */
+  position: absolute;
+  height: 100%;
+/*   
+  height: 100%;
+  width: 100%;
+  margin: 0 auto; */
+
+}
+
+
+#solo-logo {
+  width: 70px;
+  padding-top: 15%;
+  /* opacity: 0; */
+  /* display: none; */
+  
+}
+
 
 /* animations */
 /* twitter */
@@ -940,4 +1021,82 @@ input:-webkit-autofill:focus {
 @-webkit-keyframes fadeInRequired{
   from{color: rgba(255,0,0,0);}
   to{color: rgba(255,0,0,1);}
+}
+
+@keyframes whole-logo-hide {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50%{
+    /* opacity: 0.8; */
+  }
+  100% {
+    transform: translateX(10%);
+    opacity: 0;
+
+   
+  }
+}
+
+
+/* logo animations */
+@keyframes whole-logo-hide {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  50%{
+    /* opacity: 0.8; */
+  }
+  100% {
+    transform: translateX(10%);
+    opacity: 0;
+
+   
+  }
+}
+
+@keyframes whole-logo-reveal {
+  0% {
+    transform: translateX(10%);
+    opacity: 0;
+  }
+  50%{
+    /* opacity: 0.8; */
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+
+   
+  }
+}
+
+@keyframes solo-logo-reveal {
+  0% {
+    
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+   
+  }
+}
+
+@keyframes solo-logo-hide {
+  0% {
+    
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+   
+  }
 }
