@@ -417,7 +417,7 @@ font-weight: bold;
   position: fixed;
   top: 0;
   background: white;
-  height: 78px;
+  height: 90px;
   width: 100%;
   z-index: 200;
   color: black;
@@ -630,7 +630,7 @@ input:-webkit-autofill:focus {
 #logo-words-image{
   /* max-width: 100%;
   max-height: 100%; */
-  height: 100%;
+  height: 80%;
   width: 100%;
   
 }
@@ -644,7 +644,7 @@ input:-webkit-autofill:focus {
 
 #logo-words-image-mini{
   
-  height: 100%;
+  height: 80%;
   width: 100%;
 }
 
@@ -852,7 +852,9 @@ input:-webkit-autofill:focus {
 }
 
 .solo-logo-reveal{
-  display: block !important;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
   /* opacity: 0; */
   /* transform: translateX(-160%); */
   
@@ -878,7 +880,9 @@ input:-webkit-autofill:focus {
 }
 
 #whole-logo-container{
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   height: 100%;
   width: 100%;
