@@ -152,8 +152,9 @@ font-weight: bold;
 
 #news-feed-container{
   /* margin-top: 7%; */
-  max-width: 350px;
+  /* max-width: 350px; */
   position: relative;
+  width: 100%;
  
 }
 #news-feed-image{
@@ -167,7 +168,7 @@ font-weight: bold;
 
 #news-feed-container > ul{
   list-style: none;
-  padding: 10%;
+  /* padding: 10%; */
   /* padding-top: 5%; */
   /* border: 1px solid black; */
   /* margin: 5%; */

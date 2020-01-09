@@ -10,7 +10,7 @@ import { NEWSFEED_ENDPOINT } from '../properties'
 let listStyle = {
   maxHeight: '350px',
   overflow: 'scroll',
-  marginTop: '12%',  
+  marginTop: '0%',  
 }
 
 class NewsFeed extends Component {

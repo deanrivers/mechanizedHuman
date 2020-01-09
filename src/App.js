@@ -47,19 +47,19 @@ class App extends Component {
     html.css('overflow','hidden')
 
     //fetch data
-    //this.newsFeedFetch()
-    //this.twitterFeedFetch()
-    setTimeout( () => {
-      //fade out pre loader container
-      var target = $('#pre-loader-container')
-      target.fadeOut('fast')
-      //remove element from DOM after fade out
-      setTimeout( () =>{
-        target.remove()
-        var html = $('html')
-        html.css('overflow','auto')
-      },200) 
-    }, 1800)
+    this.newsFeedFetch()
+    this.twitterFeedFetch()
+    // setTimeout( () => {
+    //   //fade out pre loader container
+    //   var target = $('#pre-loader-container')
+    //   target.fadeOut('fast')
+    //   //remove element from DOM after fade out
+    //   setTimeout( () =>{
+    //     target.remove()
+    //     var html = $('html')
+    //     html.css('overflow','auto')
+    //   },200) 
+    // }, 1800)
     
   }
 
