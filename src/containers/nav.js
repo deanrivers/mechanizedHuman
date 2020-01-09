@@ -19,7 +19,7 @@ class Nav extends Component {
                 var scroll = this.scrollY
                 console.log(scroll)
 
-                if(scroll > 30){
+                if(scroll > 50){
                     //add class
                     console.log('Scroll Triggered');
       
@@ -33,24 +33,20 @@ class Nav extends Component {
                     $('#solo-logo-container').removeClass('solo-logo-hide');
                     $('#nav-container').removeClass('nav-animation-backward');
 
-                } else if(scroll <= 30){
+                } else if(scroll <= 50){
                     //add classes
                     $('#whole-logo-container').addClass('whole-logo-reveal');
                     $('#solo-logo-container').addClass('solo-logo-hide');
                     $('#nav-container').addClass('nav-animation-backward');
                     
-                    
                     //remove classes
                     $('#whole-logo-container').removeClass('whole-logo-hide');
                     $('#nav-container').removeClass('nav-animation-forward');
                     
-                    
-
                     // setTimeout(function(){ 
                         $('#solo-logo-container').css('display' , 'none'); 
                     // }, 1000);
                 }
-
             })
             
 

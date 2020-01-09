@@ -422,27 +422,22 @@ font-weight: bold;
   z-index: 200;
   color: black;
   box-shadow: 1px 1px 5px 0px;
-  
-
-
-  
 }
+
 #nav-flex{
   display: flex;
   justify-content: center;
   width: 100vw;
   margin: 0 auto;
   height: 100%;
-
 }
+
 #logo{
-  
   /* float: left; */
   padding: 100px;
 }
 
 #robot-container{
-
   margin: 0 auto;
 }
 
