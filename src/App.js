@@ -157,16 +157,6 @@ class App extends Component {
 
                       
             </div>
-
-            <div id="modal">
-              <div className="modal-content">
-                <div className="modal-paragraph">
-                  <p>Test</p>
-                  <button>Something</button>
-                </div>
-
-              </div>
-            </div>
             
             
             

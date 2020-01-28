@@ -10,7 +10,7 @@ import { NEWSFEED_ENDPOINT } from '../properties'
 let listStyle = {
   maxHeight: '350px',
   overflow: 'scroll',
-  marginTop: '0%',  
+  
 }
 
 class NewsFeed extends Component {
@@ -50,7 +50,7 @@ class NewsFeed extends Component {
         <ul style={listStyle} id="news-list">
           { this.state.feed['items'].map( (item, index ) => 
               <li key={`newsFeedLink-${index}`} >
-                <img src={item.media['$'].url} width='100%'/>
+                <img className="news-image" src={item.media['$'].url} width='100%'/>
                 <a href={item['link']} rel="noopener noreferrer" target="_blank"><p>{item['title']}</p></a>
                 <i>{item['content']}</i>
                 <br/>
