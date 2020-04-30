@@ -9,7 +9,7 @@
     "concurrently": "^4.1.2",
     "express": "^4.17.1",
     "googleapis": "^41.0.1",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "js-base64": "^2.5.1",
     "lottie-web": "^5.5.10",
     "moment": "^2.24.0",
